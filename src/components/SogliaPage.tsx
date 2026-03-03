@@ -1,4 +1,5 @@
 import { useState } from "react";
+import logoComelasfoglia from "@/assets/logo-comelasfoglia.png";
 
 interface SogliaPageProps {
   onEnter: () => void;
@@ -59,8 +60,11 @@ const SogliaPage = ({ onEnter }: SogliaPageProps) => {
       </p>
 
       {/* Footer */}
-      <footer className="absolute bottom-8 font-label text-sm text-muted-foreground/50 tracking-wider">
-        Comelasfoglia Studios
+      <footer className="absolute bottom-8 flex flex-col items-center gap-2">
+        <img src={logoComelasfoglia} alt="Comelasfoglia Studios" className="w-10 h-10 opacity-50" />
+        <span className="font-label text-sm text-muted-foreground/50 tracking-wider">
+          © 2026 Comelasfoglia Studios
+        </span>
       </footer>
     </div>
   );
