@@ -1,11 +1,60 @@
-// Update this page (the content is just a fallback if you fail to update the page)
+import { useState, useCallback } from "react";
+import SogliaPage from "@/components/SogliaPage";
+import PortePage from "@/components/PortePage";
+import NavBar from "@/components/NavBar";
+import MapSection from "@/components/MapSection";
+import AdventuresSection from "@/components/AdventuresSection";
+import AssessmentSection from "@/components/AssessmentSection";
+
+type AppScreen = "soglia" | "porte" | "esplora" | "gioca" | "scopri";
 
 const Index = () => {
+  const [screen, setScreen] = useState<AppScreen>("soglia");
+  const [fadeOut, setFadeOut] = useState(false);
+  const [targetRegionId, setTargetRegionId] = useState<string | null>(null);
+
+  const transitionTo = useCallback((target: AppScreen) => {
+    setFadeOut(true);
+    setTimeout(() => {
+      setScreen(target);
+      setFadeOut(false);
+    }, 500);
+  }, []);
+
+  const navigateTo = useCallback((target: AppScreen, regionId?: string) => {
+    if (regionId) setTargetRegionId(regionId);
+    else setTargetRegionId(null);
+    transitionTo(target);
+  }, [transitionTo]);
+
   return (
-    <div className="flex min-h-screen items-center justify-center bg-background">
-      <div className="text-center">
-        <h1 className="mb-4 text-4xl font-bold">Welcome to Your Blank App</h1>
-        <p className="text-xl text-muted-foreground">Start building your amazing project here!</p>
+    <div className="min-h-screen bg-background texture-wood vignette relative overflow-hidden"
+      style={{ background: 'linear-gradient(180deg, hsl(252, 40%, 14%) 0%, hsl(270, 30%, 18%) 100%)' }}>
+      <div className={`relative z-10 transition-opacity duration-500 ${fadeOut ? 'opacity-0' : 'opacity-100'}`}>
+        {screen === "soglia" && (
+          <SogliaPage onEnter={() => transitionTo("porte")} />
+        )}
+
+        {screen === "porte" && (
+          <PortePage onNavigate={navigateTo} />
+        )}
+
+        {(screen === "esplora" || screen === "gioca" || screen === "scopri") && (
+          <>
+            <NavBar current={screen} onNavigate={navigateTo} />
+            <main className="pt-16 md:pt-20 pb-20 md:pb-8">
+              {screen === "esplora" && (
+                <MapSection targetRegionId={targetRegionId} onClearTarget={() => setTargetRegionId(null)} />
+              )}
+              {screen === "gioca" && (
+                <AdventuresSection onNavigate={navigateTo} />
+              )}
+              {screen === "scopri" && (
+                <AssessmentSection onNavigate={navigateTo} />
+              )}
+            </main>
+          </>
+        )}
       </div>
     </div>
   );

@@ -1,0 +1,187 @@
+[
+  {
+    "id": "nord",
+    "name": "I Picchi di Gelobrina",
+    "direction": "Nord",
+    "color": "#B8D8E8",
+    "spirit": "Lo Spirito dei Ghiacci",
+    "spiritQuote": "«Il freddo non uccide. Ti insegna cosa sei disposto a perdere per restare.»",
+    "description": "Descrizione in arrivo…",
+    "subLocations": [
+      { "number": 1, "name": "La Vetta Silente", "description": "Descrizione in arrivo…" },
+      { "number": 2, "name": "Il Passo dei Corvi", "description": "Descrizione in arrivo…" },
+      { "number": 3, "name": "Le Grotte di Vetroneve", "description": "Descrizione in arrivo…" },
+      { "number": 4, "name": "Il Rifugio del Primo Fuoco", "description": "Descrizione in arrivo…" },
+      { "number": 5, "name": "La Cascata Pietrificata", "description": "Descrizione in arrivo…" },
+      { "number": 6, "name": "Il Lago dello Specchio Rotto", "description": "Descrizione in arrivo…" }
+    ],
+    "adventures": []
+  },
+  {
+    "id": "nordest",
+    "name": "L'Elfica Regione",
+    "direction": "Nord-Est",
+    "color": "#4A9E6B",
+    "spirit": "Lo Spirito delle Foglie",
+    "spiritQuote": "«Le radici sanno cose che i rami non diranno mai.»",
+    "description": "Descrizione in arrivo…",
+    "subLocations": [
+      { "number": 1, "name": "Il Bosco delle Voci", "description": "Descrizione in arrivo…" },
+      { "number": 2, "name": "La Corte dei Salici", "description": "Descrizione in arrivo…" },
+      { "number": 3, "name": "Il Ponte di Radici", "description": "Descrizione in arrivo…" },
+      { "number": 4, "name": "La Radura dei Giuramenti", "description": "Descrizione in arrivo…" },
+      { "number": 5, "name": "Le Terme Elfiche", "description": "Descrizione in arrivo…" },
+      { "number": 6, "name": "La Torre dell'Ultimo Canto", "description": "Descrizione in arrivo…" }
+    ],
+    "adventures": []
+  },
+  {
+    "id": "est",
+    "name": "Le Gole del Tramonto",
+    "direction": "Est",
+    "color": "#D4854A",
+    "spirit": "Lo Spirito del Vento Caldo",
+    "spiritQuote": "«Il tramonto non è una fine. È il momento in cui le ombre diventano più lunghe di te.»",
+    "description": "Descrizione in arrivo…",
+    "subLocations": [
+      { "number": 1, "name": "La Gola Rossa", "description": "Descrizione in arrivo…" },
+      { "number": 2, "name": "Il Ponte Sospeso", "description": "Descrizione in arrivo…" },
+      { "number": 3, "name": "La Terrazza dei Falchi", "description": "Descrizione in arrivo…" },
+      { "number": 4, "name": "Le Grotte Dipinte", "description": "Descrizione in arrivo…" },
+      { "number": 5, "name": "Il Tempio del Sole Basso", "description": "Descrizione in arrivo…" },
+      { "number": 6, "name": "La Fonte dell'Eco", "description": "Descrizione in arrivo…" }
+    ],
+    "adventures": []
+  },
+  {
+    "id": "sudest",
+    "name": "Porto Ardente",
+    "direction": "Sud-Est",
+    "color": "#A83240",
+    "spirit": "Lo Spirito del Fuoco Salato",
+    "spiritQuote": "«Il porto non dimentica chi parte. Ma non aspetta chi torna.»",
+    "description": "Porto Ardente brucia, sempre. Non nel senso delle fiamme — nel senso che tutto qui è urgente, tutto è adesso, tutto scotta se lo tieni in mano troppo a lungo. Le navi arrivano e partono con una frequenza che non ha niente di naturale, come se il porto stesso respirasse a un ritmo che nessuno ha deciso ma tutti seguono.",
+    "subLocations": [
+      { "number": 1, "name": "Il Molo delle Ombre", "description": "Descrizione in arrivo…" },
+      { "number": 2, "name": "La Taverna del Doppio Fondo", "description": "Descrizione in arrivo…" },
+      { "number": 3, "name": "Il Faro Spento", "description": "Descrizione in arrivo…" },
+      { "number": 4, "name": "La Piazza del Baratto", "description": "Descrizione in arrivo…" },
+      { "number": 5, "name": "I Magazzini Sommersi", "description": "Descrizione in arrivo…" },
+      { "number": 6, "name": "La Casa delle Maree", "description": "Descrizione in arrivo…" }
+    ],
+    "adventures": ["ombra-nessuno"]
+  },
+  {
+    "id": "sud",
+    "name": "Il Vuoto",
+    "direction": "Sud",
+    "color": "#1A1A1A",
+    "spirit": "???",
+    "spiritQuote": "«…»",
+    "description": "Descrizione in arrivo…",
+    "subLocations": [
+      { "number": 1, "name": "La Soglia del Nulla", "description": "Descrizione in arrivo…" },
+      { "number": 2, "name": "Il Campo dei Sussurri", "description": "Descrizione in arrivo…" },
+      { "number": 3, "name": "La Pietra Nera", "description": "Descrizione in arrivo…" },
+      { "number": 4, "name": "Il Sentiero che Non Torna", "description": "Descrizione in arrivo…" },
+      { "number": 5, "name": "L'Occhio del Vuoto", "description": "Descrizione in arrivo…" },
+      { "number": 6, "name": "La Fine della Mappa", "description": "Descrizione in arrivo…" }
+    ],
+    "adventures": []
+  },
+  {
+    "id": "sudovest",
+    "name": "Il Deserto di Verderame",
+    "direction": "Sud-Ovest",
+    "color": "#5BA8A0",
+    "spirit": "Lo Spirito del Rame Vivo",
+    "spiritQuote": "«Il deserto non è vuoto. È pieno di cose che hanno smesso di fingere.»",
+    "description": "Descrizione in arrivo…",
+    "subLocations": [
+      { "number": 1, "name": "Le Dune di Rame", "description": "Descrizione in arrivo…" },
+      { "number": 2, "name": "L'Oasi Meccanica", "description": "Descrizione in arrivo…" },
+      { "number": 3, "name": "La Torre dell'Ingranaggio", "description": "Descrizione in arrivo…" },
+      { "number": 4, "name": "Il Cimitero delle Macchine", "description": "Descrizione in arrivo…" },
+      { "number": 5, "name": "La Fonderia Abbandonata", "description": "Descrizione in arrivo…" },
+      { "number": 6, "name": "Il Pozzo Senza Fondo", "description": "Descrizione in arrivo…" }
+    ],
+    "adventures": []
+  },
+  {
+    "id": "ovest",
+    "name": "La Foresta di Ventascolta",
+    "direction": "Ovest",
+    "color": "#6B7A45",
+    "spirit": "Lo Spirito del Vento Verde",
+    "spiritQuote": "«Gli alberi non parlano. Ascoltano — e questo è peggio.»",
+    "description": "Descrizione in arrivo…",
+    "subLocations": [
+      { "number": 1, "name": "La Radura del Primo Passo", "description": "Descrizione in arrivo…" },
+      { "number": 2, "name": "Il Sentiero delle Lucciole", "description": "Descrizione in arrivo…" },
+      { "number": 3, "name": "La Quercia Madre", "description": "Descrizione in arrivo…" },
+      { "number": 4, "name": "Il Cerchio dei Funghi", "description": "Descrizione in arrivo…" },
+      { "number": 5, "name": "La Capanna del Guardaboschi", "description": "Descrizione in arrivo…" },
+      { "number": 6, "name": "Il Fiume Lento", "description": "Descrizione in arrivo…" }
+    ],
+    "adventures": []
+  },
+  {
+    "id": "nordovest",
+    "name": "La Palude di Torbaviva",
+    "direction": "Nord-Ovest",
+    "color": "#9E8A4F",
+    "spirit": "Lo Spirito della Torba",
+    "spiritQuote": "«La palude ricorda tutto. Per questo puzza.»",
+    "description": "Torbaviva non è un posto dove si va — è un posto dove si finisce. La palude ha una sua logica, ma non è la tua, e il fatto che i sentieri cambino ogni stagione non è un difetto: è una dichiarazione d'intenti. Qui le mappe sono opinioni, non fatti.",
+    "subLocations": [
+      { "number": 1, "name": "Il Sentiero Ubriaco", "description": "Descrizione in arrivo…" },
+      { "number": 2, "name": "La Capanna del Censore", "description": "Descrizione in arrivo…" },
+      { "number": 3, "name": "Le Pozze Calde", "description": "Descrizione in arrivo…" },
+      { "number": 4, "name": "Il Ponte Storto", "description": "Descrizione in arrivo…" },
+      { "number": 5, "name": "La Torbiera Profonda", "description": "Descrizione in arrivo…" },
+      { "number": 6, "name": "L'Isola dei Registri", "description": "Descrizione in arrivo…" }
+    ],
+    "adventures": ["torbaviva-resoconto"]
+  },
+  {
+    "id": "centro",
+    "name": "La Città",
+    "direction": "Centro",
+    "color": "#7A7A82",
+    "spirit": "Lo Spirito della Pietra",
+    "spiritQuote": "«La Città non ha un centro. Ha un'idea di centro — che è peggio.»",
+    "description": "Descrizione in arrivo…",
+    "isCity": true,
+    "quarters": [
+      {
+        "name": "Quartiere dei Mercanti",
+        "subLocations": [
+          { "number": 1, "name": "La Piazza del Cambio", "description": "Descrizione in arrivo…" },
+          { "number": 2, "name": "Il Vicolo delle Bilance", "description": "Descrizione in arrivo…" }
+        ]
+      },
+      {
+        "name": "Quartiere degli Studi",
+        "subLocations": [
+          { "number": 1, "name": "L'Accademia dei Venti", "description": "Descrizione in arrivo…" },
+          { "number": 2, "name": "La Biblioteca Aperta", "description": "Descrizione in arrivo…" }
+        ]
+      },
+      {
+        "name": "Quartiere degli Archivi",
+        "subLocations": [
+          { "number": 1, "name": "L'Archivio Centrale", "description": "Descrizione in arrivo…" },
+          { "number": 2, "name": "La Sala dei Sigilli", "description": "Descrizione in arrivo…" }
+        ]
+      },
+      {
+        "name": "L'Oltre",
+        "subLocations": [
+          { "number": 1, "name": "Il Muro di Sotto", "description": "Descrizione in arrivo…" },
+          { "number": 2, "name": "La Porta Chiusa", "description": "Descrizione in arrivo…" }
+        ]
+      }
+    ],
+    "adventures": []
+  }
+]

@@ -2,95 +2,55 @@
 @tailwind components;
 @tailwind utilities;
 
-/* Definition of the design system. All colors, gradients, fonts, etc should be defined here. 
-All colors MUST be HSL.
-*/
-
 @layer base {
   :root {
-    --background: 0 0% 100%;
-    --foreground: 222.2 84% 4.9%;
+    --background: 252 40% 14%;
+    --foreground: 35 45% 90%;
 
-    --card: 0 0% 100%;
-    --card-foreground: 222.2 84% 4.9%;
+    --card: 262 35% 20%;
+    --card-foreground: 35 45% 90%;
 
-    --popover: 0 0% 100%;
-    --popover-foreground: 222.2 84% 4.9%;
+    --popover: 262 35% 20%;
+    --popover-foreground: 35 45% 90%;
 
-    --primary: 222.2 47.4% 11.2%;
-    --primary-foreground: 210 40% 98%;
+    --primary: 42 52% 51%;
+    --primary-foreground: 252 40% 10%;
 
-    --secondary: 210 40% 96.1%;
-    --secondary-foreground: 222.2 47.4% 11.2%;
+    --secondary: 262 30% 25%;
+    --secondary-foreground: 35 45% 90%;
 
-    --muted: 210 40% 96.1%;
-    --muted-foreground: 215.4 16.3% 46.9%;
+    --muted: 262 25% 22%;
+    --muted-foreground: 35 30% 65%;
 
-    --accent: 210 40% 96.1%;
-    --accent-foreground: 222.2 47.4% 11.2%;
+    --accent: 175 45% 55%;
+    --accent-foreground: 252 40% 10%;
 
-    --destructive: 0 84.2% 60.2%;
-    --destructive-foreground: 210 40% 98%;
+    --destructive: 0 84% 60%;
+    --destructive-foreground: 35 45% 90%;
 
-    --border: 214.3 31.8% 91.4%;
-    --input: 214.3 31.8% 91.4%;
-    --ring: 222.2 84% 4.9%;
+    --border: 42 52% 51% / 0.3;
+    --input: 262 30% 28%;
+    --ring: 42 52% 51%;
 
     --radius: 0.5rem;
 
-    --sidebar-background: 0 0% 98%;
+    --sidebar-background: 252 40% 12%;
+    --sidebar-foreground: 35 45% 90%;
+    --sidebar-primary: 42 52% 51%;
+    --sidebar-primary-foreground: 252 40% 10%;
+    --sidebar-accent: 262 30% 25%;
+    --sidebar-accent-foreground: 35 45% 90%;
+    --sidebar-border: 42 52% 51% / 0.2;
+    --sidebar-ring: 42 52% 51%;
 
-    --sidebar-foreground: 240 5.3% 26.1%;
-
-    --sidebar-primary: 240 5.9% 10%;
-
-    --sidebar-primary-foreground: 0 0% 98%;
-
-    --sidebar-accent: 240 4.8% 95.9%;
-
-    --sidebar-accent-foreground: 240 5.9% 10%;
-
-    --sidebar-border: 220 13% 91%;
-
-    --sidebar-ring: 217.2 91.2% 59.8%;
-  }
-
-  .dark {
-    --background: 222.2 84% 4.9%;
-    --foreground: 210 40% 98%;
-
-    --card: 222.2 84% 4.9%;
-    --card-foreground: 210 40% 98%;
-
-    --popover: 222.2 84% 4.9%;
-    --popover-foreground: 210 40% 98%;
-
-    --primary: 210 40% 98%;
-    --primary-foreground: 222.2 47.4% 11.2%;
-
-    --secondary: 217.2 32.6% 17.5%;
-    --secondary-foreground: 210 40% 98%;
-
-    --muted: 217.2 32.6% 17.5%;
-    --muted-foreground: 215 20.2% 65.1%;
-
-    --accent: 217.2 32.6% 17.5%;
-    --accent-foreground: 210 40% 98%;
-
-    --destructive: 0 62.8% 30.6%;
-    --destructive-foreground: 210 40% 98%;
-
-    --border: 217.2 32.6% 17.5%;
-    --input: 217.2 32.6% 17.5%;
-    --ring: 212.7 26.8% 83.9%;
-    --sidebar-background: 240 5.9% 10%;
-    --sidebar-foreground: 240 4.8% 95.9%;
-    --sidebar-primary: 224.3 76.3% 48%;
-    --sidebar-primary-foreground: 0 0% 100%;
-    --sidebar-accent: 240 3.7% 15.9%;
-    --sidebar-accent-foreground: 240 4.8% 95.9%;
-    --sidebar-border: 240 3.7% 15.9%;
-    --sidebar-ring: 217.2 91.2% 59.8%;
+    --foleda-indigo: 252 40% 14%;
+    --foleda-indigo-light: 262 35% 20%;
+    --foleda-cream: 35 45% 90%;
+    --foleda-cream-dark: 33 35% 85%;
+    --foleda-gold: 42 52% 51%;
+    --foleda-gold-dark: 40 48% 48%;
+    --foleda-cyan: 175 45% 55%;
+    --foleda-cyan-bright: 175 55% 60%;
   }
 }
 
@@ -101,5 +61,138 @@ All colors MUST be HSL.
 
   body {
     @apply bg-background text-foreground;
+    font-family: 'EB Garamond', serif;
+  }
+
+  h1, h2, h3, h4, h5, h6 {
+    font-family: 'Cormorant Garamond', serif;
+  }
+}
+
+@layer components {
+  .font-display {
+    font-family: 'Cormorant Garamond', serif;
+  }
+
+  .font-body {
+    font-family: 'EB Garamond', serif;
+  }
+
+  .font-label {
+    font-family: 'Lato', sans-serif;
+  }
+
+  .texture-wood {
+    position: relative;
+  }
+
+  .texture-wood::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: repeating-linear-gradient(
+      90deg,
+      hsla(30, 20%, 15%, 0.03) 0px,
+      hsla(30, 20%, 20%, 0.05) 2px,
+      transparent 3px,
+      transparent 8px
+    ),
+    repeating-linear-gradient(
+      85deg,
+      hsla(25, 15%, 18%, 0.02) 0px,
+      hsla(25, 15%, 22%, 0.04) 1px,
+      transparent 2px,
+      transparent 12px
+    );
+    filter: blur(1px);
+    pointer-events: none;
+    z-index: 0;
+  }
+
+  .vignette {
+    position: relative;
+  }
+
+  .vignette::after {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: radial-gradient(
+      ellipse at center,
+      transparent 40%,
+      hsla(252, 40%, 8%, 0.5) 100%
+    );
+    pointer-events: none;
+    z-index: 1;
+  }
+
+  .foleda-card {
+    background: hsla(262, 35%, 20%, 0.9);
+    border: 1px solid hsla(42, 52%, 51%, 0.3);
+    border-radius: 0.5rem;
+    transition: all 300ms ease;
+  }
+
+  .foleda-card:hover {
+    transform: translateY(-4px);
+    border-color: hsla(42, 52%, 51%, 0.6);
+    box-shadow: 0 8px 32px hsla(42, 52%, 51%, 0.15);
+  }
+
+  .foleda-glow {
+    box-shadow: 0 0 20px hsla(42, 52%, 51%, 0.2);
+  }
+
+  .foleda-glow-hover:hover {
+    box-shadow: 0 0 30px hsla(42, 52%, 51%, 0.35);
+  }
+
+  .gold-border {
+    border: 1px solid hsla(42, 52%, 51%, 0.3);
+  }
+
+  .gold-border-hover:hover {
+    border-color: hsla(42, 52%, 51%, 0.6);
+  }
+}
+
+@layer utilities {
+  .slide-left-enter {
+    animation: slideLeftIn 300ms ease forwards;
+  }
+
+  .slide-left-exit {
+    animation: slideLeftOut 300ms ease forwards;
+  }
+
+  .slide-right-enter {
+    animation: slideRightIn 300ms ease forwards;
+  }
+
+  @keyframes slideLeftIn {
+    from { transform: translateX(100%); opacity: 0; }
+    to { transform: translateX(0); opacity: 1; }
+  }
+
+  @keyframes slideLeftOut {
+    from { transform: translateX(0); opacity: 1; }
+    to { transform: translateX(-100%); opacity: 0; }
+  }
+
+  @keyframes slideRightIn {
+    from { transform: translateX(-100%); opacity: 0; }
+    to { transform: translateX(0); opacity: 1; }
+  }
+
+  @keyframes diceRoll {
+    0% { transform: rotate(0deg) scale(1); }
+    25% { transform: rotate(90deg) scale(1.1); }
+    50% { transform: rotate(180deg) scale(0.9); }
+    75% { transform: rotate(270deg) scale(1.1); }
+    100% { transform: rotate(360deg) scale(1); }
+  }
+
+  .dice-rolling {
+    animation: diceRoll 0.8s ease-in-out;
   }
 }
