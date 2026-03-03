@@ -104,19 +104,48 @@ const AssessmentSection = ({ onNavigate }: AssessmentSectionProps) => {
   const result = useMemo(() => {
     const sorted = Object.entries(scores).sort(([, a], [, b]) => b - a);
     if (sorted.length === 0) return null;
-    const [firstId, firstScore] = sorted[0];
-    const [secondId, secondScore] = sorted.length > 1 ? sorted[1] : [null, 0];
-    const isTie = secondId && firstScore - secondScore < 3;
+    const maxScore = sorted[0][1];
+    let candidates = sorted.filter(([, s]) => s === maxScore).map(([id]) => id);
 
-    const first = charactersData.find(c => c.id === firstId);
-    const second = isTie ? charactersData.find(c => c.id === secondId) : null;
+    if (candidates.length > 1) {
+      // Livello 1: conta i +3 (deep hits)
+      const deepHits: Record<string, number> = {};
+      candidates.forEach(id => { deepHits[id] = 0; });
+      answers.forEach((optIdx, qIdx) => {
+        if (optIdx === undefined) return;
+        const option = shuffledQuestions[qIdx].options[optIdx];
+        candidates.forEach(id => {
+          if (option.weights[id] === 3) deepHits[id]++;
+        });
+      });
+      const maxHits = Math.max(...candidates.map(id => deepHits[id]));
+      candidates = candidates.filter(id => deepHits[id] === maxHits);
+    }
 
-    return { first, second, isTie };
-  }, [scores]);
+    if (candidates.length > 1) {
+      // Livello 2: domanda 16 (originalIndex === 15)
+      const q16Idx = shuffledQuestions.findIndex(q => q.originalIndex === 15);
+      if (q16Idx !== -1 && answers[q16Idx] !== undefined) {
+        const q16Option = shuffledQuestions[q16Idx].options[answers[q16Idx]];
+        const q16Scores: Record<string, number> = {};
+        candidates.forEach(id => { q16Scores[id] = q16Option.weights[id] || 0; });
+        const maxQ16 = Math.max(...candidates.map(id => q16Scores[id]));
+        candidates = candidates.filter(id => q16Scores[id] === maxQ16);
+      }
+    }
+
+    if (candidates.length > 1) {
+      // Livello 3: il vento sceglie
+      candidates = [candidates[Math.floor(Math.random() * candidates.length)]];
+    }
+
+    const first = charactersData.find(c => c.id === candidates[0]);
+    return { first };
+  }, [scores, answers, shuffledQuestions]);
 
   const handleShare = useCallback(() => {
     if (!result?.first) return;
-    const text = `Nella Piana dei Sette Venti, io sono ${result.first.name}. "${result.first.resultQuote}" Scopri chi sei tu → ${window.location.origin}`;
+    const text = `Nella Piana dei Sette Venti, io sono ${result.first!.name}. "${result.first!.resultQuote}" Scopri chi sei tu → ${window.location.origin}`;
     navigator.clipboard.writeText(text);
   }, [result]);
 

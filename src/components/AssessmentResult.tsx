@@ -19,8 +19,6 @@ interface CharacterData {
 interface AssessmentResultProps {
   result: {
     first: CharacterData | undefined;
-    second: CharacterData | null | undefined;
-    isTie: string | boolean | null;
   };
   onNavigate: (target: AppScreen, regionId?: string) => void;
   onRestart: () => void;
@@ -138,47 +136,18 @@ const AssessmentResult = ({ result, onNavigate, onRestart, onShare }: Assessment
 
   return (
     <div className="max-w-2xl mx-auto px-4">
-      {result.isTie && result.second ? (
-        <>
-          <p className="font-body italic text-foreground/70 mb-8 text-center">
-            La Piana esita. Sei a metà strada tra{" "}
-            <span className="text-accent">{result.first.name}</span> e{" "}
-            <span className="text-accent">{result.second.name}</span>{" "}
-            — il vento che ti porterà non ha ancora deciso da che parte soffiare.
-          </p>
-          {[result.first, result.second].map(char => (
-            <div key={char.id} className="mb-12">
-              <div className="text-center mb-6">
-                <h2 className="font-display text-4xl md:text-5xl font-bold mb-2 text-accent">
-                  {char.name}
-                </h2>
-                <p className="font-label text-sm text-primary/60 mb-4">
-                  {char.regionName} · {char.role || ''}
-                </p>
-                <p className="font-body text-xl italic text-foreground/80 leading-relaxed mb-6">
-                  "{char.resultQuote}"
-                </p>
-              </div>
-              <CharacterCard char={char} onNavigate={onNavigate} />
-            </div>
-          ))}
-        </>
-      ) : (
-        <>
-          <div className="text-center mb-10">
-            <h2 className="font-display text-5xl md:text-6xl font-bold mb-2 animate-scale-in text-accent">
-              {result.first.name}
-            </h2>
-            <p className="font-label text-sm text-primary/60 mb-6">
-              {result.first.regionName} · {result.first.role || ''}
-            </p>
-            <p className="font-body text-xl italic text-foreground/80 leading-relaxed mb-10">
-              "{result.first.resultQuote}"
-            </p>
-          </div>
-          <CharacterCard char={result.first} onNavigate={onNavigate} />
-        </>
-      )}
+      <div className="text-center mb-10">
+        <h2 className="font-display text-5xl md:text-6xl font-bold mb-2 animate-scale-in text-accent">
+          {result.first.name}
+        </h2>
+        <p className="font-label text-sm text-primary/60 mb-6">
+          {result.first.regionName} · {result.first.role || ''}
+        </p>
+        <p className="font-body text-xl italic text-foreground/80 leading-relaxed mb-10">
+          "{result.first.resultQuote}"
+        </p>
+      </div>
+      <CharacterCard char={result.first} onNavigate={onNavigate} />
 
       {/* Actions */}
       <div className="space-y-3 mt-8 text-center pb-12">
