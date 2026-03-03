@@ -1,3 +1,5 @@
+import { Home } from "lucide-react";
+
 type AppScreen = "soglia" | "porte" | "esplora" | "gioca" | "scopri";
 
 interface NavBarProps {
@@ -18,10 +20,17 @@ const NavBar = ({ current, onNavigate }: NavBarProps) => {
       <nav className="hidden md:flex fixed top-0 left-0 right-0 z-50 items-center px-6 py-3 gap-6"
         style={{ background: 'hsla(252, 40%, 12%, 0.95)', borderBottom: '1px solid hsla(42, 52%, 51%, 0.15)' }}>
         <button
+          onClick={() => onNavigate("soglia" as AppScreen)}
+          className="text-muted-foreground hover:text-foreground transition-colors mr-2"
+          aria-label="Home"
+        >
+          <Home size={18} />
+        </button>
+        <button
           onClick={() => onNavigate("porte")}
           className="font-label text-sm text-muted-foreground hover:text-foreground transition-colors"
         >
-          ← La Piana
+          ← Le Tre Porte
         </button>
         <div className="flex-1" />
         {navItems.map((item) => (

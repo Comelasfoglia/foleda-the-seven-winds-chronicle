@@ -1,5 +1,5 @@
+import { Home } from "lucide-react";
 import ComelasfogliaFooter from "@/components/ComelasfogliaFooter";
-
 type AppScreen = "soglia" | "porte" | "esplora" | "gioca" | "scopri";
 
 interface PortePageProps {
@@ -29,7 +29,16 @@ const doors = [
 
 const PortePage = ({ onNavigate }: PortePageProps) => {
   return (
-    <div className="flex flex-col items-center justify-center min-h-screen px-4 py-16">
+    <div className="flex flex-col items-center justify-center min-h-screen px-4 py-16 relative">
+      {/* Home button */}
+      <button
+        onClick={() => onNavigate("soglia" as AppScreen)}
+        className="absolute top-6 left-6 text-muted-foreground/60 hover:text-foreground transition-colors"
+        aria-label="Torna alla home"
+      >
+        <Home size={22} />
+      </button>
+
       <h2 className="font-display text-3xl md:text-4xl font-semibold text-foreground mb-4 text-center">
         Le Tre Porte
       </h2>
