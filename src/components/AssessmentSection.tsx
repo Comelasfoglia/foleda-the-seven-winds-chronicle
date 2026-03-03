@@ -5,6 +5,7 @@ import adventuresData from "@/data/adventures.json";
 import { Progress } from "@/components/ui/progress";
 import { ChevronLeft } from "lucide-react";
 import AssessmentResult from "@/components/AssessmentResult";
+import ComelasfogliaFooter from "@/components/ComelasfogliaFooter";
 
 type AppScreen = "soglia" | "porte" | "esplora" | "gioca" | "scopri";
 
@@ -167,6 +168,7 @@ const AssessmentSection = ({ onNavigate }: AssessmentSectionProps) => {
         >
           Comincia
         </button>
+        <ComelasfogliaFooter />
       </div>
     );
   }

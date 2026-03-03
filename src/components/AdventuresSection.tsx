@@ -1,5 +1,6 @@
 import adventuresData from "@/data/adventures.json";
 import regionsData from "@/data/regions.json";
+import ComelasfogliaFooter from "@/components/ComelasfogliaFooter";
 
 type AppScreen = "soglia" | "porte" | "esplora" | "gioca" | "scopri";
 
@@ -69,6 +70,8 @@ const AdventuresSection = ({ onNavigate }: AdventuresSectionProps) => {
           </button>
         </p>
       </div>
+
+      <ComelasfogliaFooter />
     </div>
   );
 };

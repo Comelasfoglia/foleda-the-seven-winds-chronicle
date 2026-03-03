@@ -2,6 +2,7 @@ import { useState, useEffect, useCallback } from "react";
 import regionsData from "@/data/regions.json";
 import RegionModal from "@/components/RegionModal";
 import DiceRoller from "@/components/DiceRoller";
+import ComelasfogliaFooter from "@/components/ComelasfogliaFooter";
 
 interface MapSectionProps {
   targetRegionId: string | null;
@@ -155,6 +156,8 @@ const MapSection = ({ targetRegionId, onClearTarget }: MapSectionProps) => {
           onClose={handleCloseModal}
         />
       )}
+
+      <ComelasfogliaFooter />
     </div>
   );
 };
