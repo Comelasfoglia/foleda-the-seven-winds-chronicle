@@ -1,3 +1,5 @@
+import ComelasfogliaFooter from "@/components/ComelasfogliaFooter";
+
 type AppScreen = "soglia" | "porte" | "esplora" | "gioca" | "scopri";
 
 interface PortePageProps {
@@ -61,10 +63,7 @@ const PortePage = ({ onNavigate }: PortePageProps) => {
         ))}
       </div>
 
-      {/* Footer */}
-      <footer className="mt-16 font-label text-sm text-muted-foreground/50 tracking-wider">
-        Comelasfoglia Studios
-      </footer>
+      <ComelasfogliaFooter />
     </div>
   );
 };
