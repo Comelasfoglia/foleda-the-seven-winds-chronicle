@@ -7,7 +7,7 @@
       { "text": "Sei sotto il tavolo. C'è un mondo intero lì sotto, fatto di gambe di sedie e briciole e scarpe che non riconosci.", "weights": { "muda": 3, "restio": 1 } },
       { "text": "Ascolti i grandi. Non capisci tutto, ma capisci chi dice la verità e chi no — dal tono, non dalle parole.", "weights": { "acanto": 3, "camillo": 2 } },
       { "text": "Sei già in cortile. Il fosso, il muretto, il gatto del vicino — qualsiasi cosa è meglio che stare fermi.", "weights": { "lisca": 3, "muda": 2 } },
-      { "text": "Stai aiutando a sparecchiare. Nessuno te l'ha chiesto, ma i piatti non si portano via da soli.", "weights": { "virginia": 3, "bruna": 1, "restio": 1 } }
+      { "text": "Stai aiutando a portare i piatti in cucina, perché da lì puoi stare vicino ai grandi senza che ti mandino via — e la nonna ti passa le cose da mettere a posto come se fossi uno di loro, e per quei cinque minuti lo sei.", "weights": { "virginia": 3, "bruna": 1, "restio": 1 } }
     ]
   },
   {

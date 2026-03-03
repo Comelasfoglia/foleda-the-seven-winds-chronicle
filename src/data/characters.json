@@ -4,63 +4,176 @@
     "name": "Solenne Acanto",
     "regionId": "nordest",
     "regionName": "L'Elfica Regione",
+    "role": "Diplomatico esiliato, lettore di bugie",
     "resultQuote": "Hai visto la bugia prima che finisse. Alla corte elfica questo è un crimine.",
-    "adventureId": null
+    "adventureId": null,
+    "bio": [
+      "Solenne Acanto ha la postura di chi è cresciuto con un libro in equilibrio sulla testa e l'abitudine di chi non ha ancora capito che fuori dalla regione elfica nessuno si alza in piedi quando entra qualcuno. È alto, sottile, con un viso che sembra fatto apposta per guardarti dall'alto in basso anche quando non vuole, e porta un mantello che una volta era la cosa più elegante della corte; adesso è la cosa più elegante in qualsiasi stanza dove entra, il che fuori dalla corte non è un complimento ma una stranezza, e Acanto non ha ancora imparato la differenza.",
+      "È stato potato dalla corte — e se non sai cosa significa è perché non hai mai messo piede nella Regione del Nord-Est, e fidati che è un bene. Potare è quello che gli elfi fanno quando vogliono eliminare qualcuno ma trovano volgare sporcarsi le mani: ti accompagnano alla porta con un sorriso, un inchino, e la certezza che se provi a tornare indietro i fiori lungo il sentiero saranno quelli del tuo funerale. Il crimine di Acanto: ha detto una cosa vera, ad alta voce, senza il condizionale, davanti a gente che aveva costruito tutta la carriera sul non dirla. Alla corte elfica questo è peggio di un assassinio, perché l'assassinio almeno dimostra che hai la decenza di agire in silenzio.",
+      "Fuori dalla corte è un disastro. Parla con una cortesia così elaborata che la gente non sa mai se li sta insultando o ringraziando, e il bello è che non lo sa nemmeno lui: nella lingua degli elfi le due cose funzionano uguali. Vuole essere gentile, davvero, ma la sua gentilezza è stata costruita in un posto dove \"gentile\" significava \"pericoloso con le buone maniere\", e cambiare quella roba lì non è una cosa che si fa in un pomeriggio. In compenso vede tutto: le esitazioni, le bugie, le parole scelte con troppa cura. Sa chi mente prima che la bugia sia finita. Alla corte, sapere che qualcuno mente era potere. Qui fuori è solo triste, e triste è una cosa che non gli hanno insegnato a gestire.",
+      "Di sera si siede in disparte e muove le dita nell'aria — l'arte elfica di parlare nel vento, che fuori dalla regione nessuno può sentire. A chi gli chiede cosa sta facendo, dice: \"Niente.\" Non ha mai detto a chi sta parlando."
+    ],
+    "stats": { "fisico": 2, "testa": 6, "vento": 4, "agilita": 3, "ferite": 6 },
+    "abilities": [
+      { "name": "Potatura", "type": "Attacco ravvicinato", "desc": "1d8 + Testa" },
+      { "name": "Innesto", "type": "Supporto in combattimento", "desc": "1d6: con 5+ un alleato ripete il tiro fallito" },
+      { "name": "Sfogliare", "type": "Supporto", "desc": "+4 a leggere intenzioni, scoprire bugie, percepire inganni" },
+      { "name": "Germoglio", "type": "Supporto", "desc": "+2 a etichetta, diplomazia, conoscenza delle corti" }
+    ]
   },
   {
     "id": "restio",
     "name": "Restìo-33",
     "regionId": "sudovest",
     "regionName": "Il Deserto di Verderame",
+    "role": "Robot riparatore, poeta involontario",
     "resultQuote": "Era rotto. Tu l'hai visto. Gli altri no.",
-    "adventureId": null
+    "adventureId": null,
+    "bio": [
+      "Restìo-33 è un robot di Verderame — squadrato, pesante, con le giunture che scricchiolano quando piove e una placca sul petto dove una volta c'era scritto il suo numero di serie ma adesso c'è solo un graffio lungo che potrebbe essere un incidente o potrebbe essere una scelta. Come tutti i robot della Piana nessuno sa chi lo abbia costruito, quando, e con quali intenzioni: i robot c'erano prima di chiunque altro e ci saranno dopo, e questa è una delle poche cose su cui tutti nella Piana sono d'accordo. Rispetto alla maggior parte dei suoi simili, Restìo-33 è meno incline alla contemplazione e più incline a tenere insieme le cose con le mani; a Verderame questo lo rende un tipo pratico, che per un robot è un insulto lieve mascherato da complimento.",
+      "Di mestiere ripara cose, e fin qui niente di strano. Il problema è che Restìo-33 ripara cose che nessuno gli ha chiesto di riparare. Il cancello che cigola lo aggiusta di notte. La sedia traballante dell'osteria la rimette a posto mentre nessuno guarda. Se vede un muro storto ci pensa per tre giorni e poi torna con il cemento. \"Era rotto\" è la sua spiegazione per tutto, e non accetta l'idea che certe cose siano rotte apposta, o che certe persone preferiscano i cancelli che cigolano perché almeno sai quando qualcuno entra. Quando gli hanno fatto notare che anche una poesia, in un certo senso, è una cosa rotta messa insieme in un modo nuovo, ci ha pensato a lungo e poi ha detto: \"Allora forse aggiustare è il mio modo di scrivere poesie.\" I robot di Verderame si sono complimentati. Restìo-33 non ha capito che si stavano complimentando, perché il complimento era formulato come una critica, che a Verderame è la forma più alta di apprezzamento.",
+      "Ultimamente ha cominciato a fare la stessa cosa con le persone. Non che le ripari — sa che non funziona così, anche se ogni tanto ci pensa — ma ci prova, a modo suo: se hai freddo ti mette una coperta sulle spalle senza dire niente, se sei triste ti costruisce qualcosa — una scatolina, un fermaglio, un piccolo aggeggio che non serve a niente se non a dirti che qualcuno si è accorto che eri triste. Una volta ha detto a una donna al mercato: \"Il tuo viso oggi è diverso da ieri. Ieri era più luminoso.\" La donna lo ha preso male. Restìo-33 ci ha pensato per giorni, perché far stare male qualcuno che volevi far stare meglio è la cosa più rotta che conosca.",
+      "Una volta al mese si ferma, si siede, e resta immobile per un giorno intero. Gli altri robot lo chiamano \"manutenzione preventiva.\" Restìo-33 non li corregge. Ma durante quelle ore i suoi occhi ottici sono accesi, e se ti avvicini abbastanza senti un ronzio bassissimo, come se stesse calcolando qualcosa di molto complicato. Sulla placca pettoriale, il giorno dopo, c'è sempre un graffio nuovo. Nessuno lo ha mai visto farselo."
+    ],
+    "stats": { "fisico": 7, "testa": 4, "vento": 1, "agilita": 3, "ferite": 6 },
+    "abilities": [
+      { "name": "Battuta Secca", "type": "Attacco ravvicinato", "desc": "1d8 + Fisico" },
+      { "name": "Lastra", "type": "Supporto in combattimento", "desc": "1d6: con 4+ ignora le ferite del prossimo attacco" },
+      { "name": "Giuntura", "type": "Supporto", "desc": "+3 a riparare, costruire, capire come funziona qualcosa" },
+      { "name": "Caparbieria", "type": "Supporto", "desc": "+2 a resistenza e prove per non arrendersi" }
+    ]
   },
   {
     "id": "bruna",
     "name": "Bruna",
     "regionId": "nord",
     "regionName": "I Picchi di Gelobrina",
+    "role": "Segnatrice, guaritrice che non guarisce più",
     "resultQuote": "Sai cosa ha qualcuno prima che lo sappia lui. Non è sempre una gentilezza.",
-    "adventureId": null
+    "adventureId": null,
+    "bio": [
+      "Bruna è piccola, asciutta, e ha le mani di chi ha passato la vita a raccogliere erbe in posti dove le erbe non vogliono crescere. A Gelobrina la riconoscevi dalla borsa — una sacca di cuoio duro piena di fiale, radici secche, impacchi, e rimedi per tutto quello che il freddo può farti, che a Gelobrina è praticamente tutto. Era la segnatrice di Sotto-la-Cresta: quando ti facevi una storta, un crampo, un osso che andava dove non doveva andare, lei ti prendeva la mano, la passava sul punto, e diceva parole che non erano preghiere e non erano formule e non erano niente che si potesse scrivere, e il dolore se ne andava. Come funzionasse non lo sapeva nemmeno lei; sapeva solo che sua nonna lo aveva insegnato a sua madre, sua madre a lei, e che le mani dovevano essere calde e la voce doveva essere ferma. Se stavi male andavi da Bruna, e se non stavi male andavi lo stesso perché ti guardava in faccia e ti diceva cosa avevi prima che lo sapessi tu, il che non era sempre piacevole ma era sempre giusto.",
+      "Non guarisce più. Ha ancora la borsa, ancora piena, e se le chiedi perché la porta risponde \"per abitudine\" con un tono che chiude la conversazione come si chiude un cassetto. Qualcosa è successo a Sotto-la-Cresta che ha a che fare con le sue mani e con qualcuno che adesso non c'è più, ma Bruna non lo racconta e nessuno del villaggio lo racconterà al posto suo, perché a Gelobrina i segreti li tiene il ghiaccio e il ghiaccio non parla. Se insisti non si arrabbia. Fa peggio: ti guarda con quegli occhi chiari da montagna e dice \"non è affar tuo\" con una gentilezza che taglia più di un coltello.",
+      "Il problema di Bruna è che vede il mondo come le sue diagnosi: una cosa è sana o è malata, è giusta o è sbagliata, e le vie di mezzo sono scuse che la gente si racconta per non fare la cosa difficile. Questa rigidità la rende la persona più affidabile che conoscerai — sai sempre dove sta, non mente, non cambia idea per farti piacere — e anche la più insopportabile, perché non perdona. Non perdona gli altri e soprattutto non perdona sé stessa.",
+      "Il cane si chiama Cane. È grosso, grigio, vecchio, e cammina con la lentezza di chi ha già visto la strada e non ha fretta di rivederla. Ha le anche rigide e un orecchio che non si drizza più del tutto, ma il naso funziona meglio di qualsiasi bussola e di notte dorme con un occhio aperto, sempre rivolto verso la porta. Se gli parli ti guarda, decide se vai bene, e torna a dormire. Bruna dice che non gli ha dato un nome perché non ne aveva bisogno. Il cane non sembra offeso. Se Bruna si siede, Cane si sdraia ai suoi piedi. Se Bruna si alza, Cane si alza. Se Bruna piange — e Bruna piange, a volte, di notte, quando pensa che nessuno la senta — Cane le mette il muso sulla gamba e resta lì senza fare niente, che poi è la cosa giusta da fare."
+    ],
+    "stats": { "fisico": 2, "testa": 4, "vento": 6, "agilita": 3, "ferite": 6 },
+    "abilities": [
+      { "name": "Gelo", "type": "Attacco ravvicinato", "desc": "1d8 + Vento" },
+      { "name": "Rimedio", "type": "Supporto in combattimento", "desc": "1d6: con 4+ un alleato recupera 1 ferita" },
+      { "name": "Radici", "type": "Supporto", "desc": "+3 a riconoscere piante, preparare rimedi, diagnosticare" },
+      { "name": "Buon Cane", "type": "Supporto", "desc": "+2 a orientarsi, fiutare, montare la guardia" }
+    ]
   },
   {
     "id": "muda",
     "name": "Muda",
     "regionId": "est",
     "regionName": "Le Gole del Tramonto",
+    "role": "Kantai mutaforma, irrequieta",
     "resultQuote": "Non stai mai ferma. Non perché non puoi — perché non vuoi sapere cosa succede quando ti fermi.",
-    "adventureId": null
+    "adventureId": null,
+    "bio": [
+      "Muda ha quindici anni, o sedici, dipende da quando le chiedi perché non tiene il conto e non le importa tenerlo. È bassa, magra, con i capelli corti tagliati male — li taglia lei, con un coltello, e se le dici che si vede risponde \"bene.\" Ha gli occhi gialli dei Kantai di sangue puro e le mani che non stanno mai ferme: si mangia le unghie, giocherella con quello che trova, arrotola fili d'erba tra le dita, e se non ha niente a portata di mano si gratta il polso o tamburella sulle ginocchia. Dice che è un vizio. Non è un vizio. È il modo in cui il suo corpo dice le cose che la bocca non vuole dire.",
+      "Si trasforma, come tutti i Kantai delle Gole. In cosa dipende dal giorno, dall'umore, dal vento — non lo decide del tutto, e questo è normale, dicono gli anziani, si impara col tempo. Il problema non è la trasformazione: è il ritorno. Ogni volta che torna in forma umana qualcosa è leggermente diverso — un ricordo meno nitido, una parola che prima conosceva e adesso le sfugge, un gesto che fa senza sapere perché. Gli anziani dicono che è normale anche questo. Muda non è sicura che \"normale\" e \"va tutto bene\" siano la stessa cosa, ma se glielo chiedi ride, cambia discorso, e ti prende in giro per come tieni il coltello o per come cammini o per qualsiasi cosa le capiti a tiro, perché ridere è più facile e fare la dura è più facile e qualsiasi cosa è più facile che dire \"ho paura che un giorno non riconoscerò la strada di casa.\"",
+      "Non dorme mai abbastanza. La notte è sua — l'unico momento in cui nessuno la guarda e nessuno le chiede niente, e se ne sta seduta a fissare il fuoco o il cielo o niente in particolare, con le mani finalmente ferme. Mangia male: dimentica, salta i pasti, poi divora tutto quello che trova come se non mangiasse da tre giorni, il che a volte è vero. Se qualcuno le fa notare che deve mangiare di più lo guarda come se avesse detto una cosa irrilevante. Se qualcuno le prepara un piatto senza dirle niente, lo mangia tutto e non dice grazie ma la prossima volta si siede un po' più vicino.",
+      "A casa, alle Gole, ha lasciato qualcosa. Non dice cosa. Non lo ha mai chiesto indietro."
+    ],
+    "stats": { "fisico": 4, "testa": 3, "vento": 2, "agilita": 6, "ferite": 6 },
+    "abilities": [
+      { "name": "Zanna", "type": "Attacco ravvicinato", "desc": "1d8 + Agilità" },
+      { "name": "Muta", "type": "Supporto in combattimento", "desc": "1d6: con 5+ raddoppia Agilità per il prossimo tiro" },
+      { "name": "Fiuto", "type": "Supporto", "desc": "+3 a seguire tracce, sentire odori, muoversi nel buio" },
+      { "name": "Schietta", "type": "Supporto", "desc": "+2 a capire bugie, intimidire, farsi rispettare" }
+    ]
   },
   {
     "id": "cambiale",
     "name": "Cambiale",
     "regionId": "centro",
     "regionName": "La Città",
+    "role": "Venditore ambulante, affabulatore",
     "resultQuote": "Hai già contato le uscite, i bicchieri sul tavolo, e quanto vale il sorriso di chi ti sta davanti.",
-    "adventureId": null
+    "adventureId": null,
+    "bio": [
+      "Ha più di cinquant'anni ma non li dimostra, o almeno così dice lui, e siccome lo dice con una convinzione tale che finisci per credergli funziona come la maggior parte delle cose che dice: non perché siano vere ma perché lui ci mette una faccia che il dubbio sembra maleducazione. È curato in un modo che alla Città non si vede spesso — capelli pettinati, unghie pulite, scarpe lucide anche quando piove, giacca sempre in ordine anche se è la stessa giacca da anni e i polsini cominciano a cedere. L'aspetto è il suo strumento di lavoro e lo tratta di conseguenza: prima di bussare a una porta si sistema il colletto, si passa una mano sui capelli, e sorride. Il sorriso è l'ultima cosa che mette, come un cappello.",
+      "Vende. Cosa vende dipende dalla settimana, dal quartiere, da chi apre la porta: stoffe, unguenti, attrezzi, spezie, servizi che non sapevi di volere e che dopo averlo ascoltato per dieci minuti ti sembrano indispensabili. Non ha un banco, non ha un magazzino, non ha una sede; ha le gambe, la lingua, e una conoscenza della Città che nessuna mappa potrà mai contenere perché le mappe non segnano chi abita al terzo piano e ha bisogno di pentole nuove, e lui sì. È nato qui e non è mai uscito, non per amore e non per pigrizia ma perché la Città è un posto dove puoi bussare a diecimila porte e non finire mai, e a lui le porte che finiscono non interessano.",
+      "Qualcuno lo chiama disonesto e lui ti spiega con calma perché hai torto, e quando ha finito di spiegare hai torto davvero, o almeno non sei più sicuro di avere ragione, che per lui è la stessa cosa. Ha un codice morale suo, sincero nel momento in cui lo dice; il momento dopo dipende dalle circostanze. Non rallenta, non si ferma, non sta zitto.",
+      "L'unica volta che sta zitto è la mattina presto, prima che la Città si svegli, quando si siede sulla stessa panchina nel quartiere dell'Oltre e si lustra le scarpe. Le lustra con una cura che non ha niente a che fare con il lavoro. Le lustrava suo padre, ogni mattina, e suo padre non vendeva niente — faceva il falegname. È un gesto vecchio, di prima, di quando era qualcun altro. Dura poco. Poi si alza, si sistema il colletto, e bussa alla prima porta."
+    ],
+    "stats": { "fisico": 3, "testa": 6, "vento": 2, "agilita": 5, "ferite": 5 },
+    "abilities": [
+      { "name": "Sgambetto", "type": "Attacco ravvicinato", "desc": "1d8 + Agilità" },
+      { "name": "Specchietto", "type": "Supporto in combattimento", "desc": "1d6: con 5+ il nemico attacca un altro nemico" },
+      { "name": "Brillantina", "type": "Supporto", "desc": "+4 a convincere, mentire, vendere, farsi aprire le porte" },
+      { "name": "Selciato", "type": "Supporto", "desc": "+2 a orientarsi nella Città e conoscere qualcuno che conosce qualcuno" }
+    ]
   },
   {
     "id": "lisca",
     "name": "Lìsca",
     "regionId": "sudest",
     "regionName": "Porto Ardente",
+    "role": "Recuperatore, ladro d'acqua",
     "resultQuote": "Stai già ridendo. Non è un buon segno — per gli altri.",
-    "adventureId": "ombra-nessuno"
+    "adventureId": "ombra-nessuno",
+    "bio": [
+      "Lìsca è magro, bagnato, e ha sempre una risposta pronta. A Porto Ardente lo riconosci dalle dita palmate, dalle orecchie tonde e basse e dal fatto che sta ridendo di te prima ancora che tu abbia aperto bocca. Di mestiere recupera cose cadute in mare — o almeno così dice sulla sua barca arenata nei Canali Bassi, dove l'acqua arriva alle caviglie con la marea alta e nessuno viene mai a fare domande.",
+      "In realtà Lìsca ruba. Ruba ai pirati, che a Porto Ardente è quasi un servizio pubblico. I pirati sono troppo impegnati a essere pirati — a minacciarsi, a contare i bottini, a lucidare le sciabole — per accorgersi di un mezzo lontra con le dita veloci e un sorriso che non promette niente di buono. \"Non è colpa mia se lasciano le cose dove le trovo,\" dice, e non è mai chiaro se stia scherzando. Non sta scherzando.",
+      "Ha la lingua più tagliente di Porto Ardente, il che in una città di contrabbandieri e tagliagole è un risultato notevole. Risponde alle minacce con battute, alle battute con battute migliori, e ai complimenti con sospetto. Non si fida di nessuno per principio, ma se gli piaci ti insulterà con più cura. Suo padre è un portuale che parla poco. Sua madre era Kantai. Lìsca ha ereditato da lei le dita, le orecchie, il pelo corto sugli avambracci che non si asciuga mai del tutto, e un'inquietudine nel sonno che non sa spiegarsi — a volte sogna di nuotare in un mare senza fondo, e qualcosa nuota con lui.",
+      "C'è un falco pescatore che nidifica sul faro vecchio. Lìsca gli lascia del pesce ogni mattina, prima dell'alba, quando nessuno guarda. Se qualcuno glielo fa notare, cambia discorso. Se insistono, smette di ridere. È l'unica cosa che lo fa smettere di ridere."
+    ],
+    "stats": { "fisico": 2, "testa": 5, "vento": 3, "agilita": 6, "ferite": 5 },
+    "abilities": [
+      { "name": "Risacca", "type": "Attacco ravvicinato", "desc": "1d8 + Agilità" },
+      { "name": "Mulinello", "type": "Supporto in combattimento", "desc": "1d6: con 5+ il nemico perde il prossimo turno" },
+      { "name": "Dita d'Acqua", "type": "Supporto", "desc": "+3 a rubare e scassinare" },
+      { "name": "Selvatico", "type": "Supporto", "desc": "+2 a osservare e nuotare" }
+    ]
   },
   {
     "id": "camillo",
     "name": "Camillo Fermo",
     "regionId": "nordovest",
     "regionName": "La Città → Torbaviva",
+    "role": "Funzionario della Torre, archivista sul campo",
     "resultQuote": "Vieni dalla Città, ma la Piana ti porterà a Torbaviva. C'è un fascicolo che non torna.",
-    "adventureId": "torbaviva-resoconto"
+    "adventureId": "torbaviva-resoconto",
+    "bio": [
+      "Camillo Fermo è asciutto, stirato, e ha sempre una cravatta pulita. Alla Torre lo riconosci dalla postura — schiena dritta anche seduto, spalle indietro come se portasse un peso che nessuno vede — e dal fatto che sta già scrivendo qualcosa nel taccuino prima ancora che tu abbia finito di parlare. Ha le mani di uno che non ha mai lavorato la terra ma ha consumato più inchiostro di un tipografo, e gli occhi di chi ascolta anche quando sembra che stia leggendo.",
+      "Di mestiere Camillo archivia, verifica, protocolla. È l'uomo che la Direttrice manda quando un fascicolo non torna — un numero fuori posto, una firma che manca, un rapporto in ritardo — perché i fascicoli che non tornano sono fascicoli che mentono, e Camillo non sopporta le bugie dei numeri, che sono peggio delle bugie delle persone perché almeno le persone hanno la decenza di guardarti in faccia quando mentono. Non è il tipo di lavoro che si racconta alle feste, e Camillo non va alle feste. Va in ufficio presto, esce tardi, e nel tragitto si ferma sempre allo stesso banco del mercato coperto a comprare le stesse castagne calde dallo stesso venditore che non gli ha mai chiesto il nome. Non gli importa. Gli importa che le castagne siano calde.",
+      "Se gli parli, ti risponde con una precisione che può sembrare scortesia ma non lo è — è solo che Camillo non sa perdere tempo con le parole, il che è strano per uno che ne usa così tante nei suoi rapporti, ma i rapporti sono un'altra cosa, i rapporti sono il modo giusto di dire le cose e le conversazioni sono il modo in cui la gente finge che le parole non abbiano conseguenze. La Direttrice lo chiama \"Fermo\" e lui la chiama \"Direttrice\" e tra i due c'è qualcosa che assomiglia a un rispetto profondo oppure a un'abitudine così vecchia che nessuno dei due saprebbe più distinguerla dall'affetto. Quando c'è un problema che nessuno vuole risolvere, la Direttrice dice \"mandateci Fermo\" e tutti sospirano di sollievo perché non devono andare loro.",
+      "C'è una cosa che Camillo non ha mai scritto in nessun rapporto. A volte, la sera, quando l'ufficio è vuoto e le tubature del vento fischiano nel modo giusto, resta seduto alla scrivania senza scrivere niente. Guarda la finestra. Non pensa a niente di preciso — o almeno così direbbe se qualcuno glielo chiedesse. Nessuno glielo chiede. Ma in quei momenti le mani smettono di muoversi e lui ha un'espressione che i colleghi non gli hanno mai visto, come se stesse ascoltando qualcosa che non riesce a sentire."
+    ],
+    "stats": { "fisico": 4, "testa": 6, "vento": 1, "agilita": 4, "ferite": 6 },
+    "abilities": [
+      { "name": "Contraccolpo", "type": "Attacco ravvicinato", "desc": "1d6 + Fisico" },
+      { "name": "Protocollo", "type": "Supporto in combattimento", "desc": "1d6: con 4+ il nemico perde il prossimo turno" },
+      { "name": "Nota a Margine", "type": "Supporto", "desc": "+3 a osservare e dedurre" },
+      { "name": "Interlocutorio", "type": "Supporto", "desc": "+2 a interrogare e persuadere" }
+    ]
   },
   {
     "id": "virginia",
     "name": "La Virginia",
     "regionId": "ovest",
     "regionName": "La Foresta di Ventascolta",
+    "role": "Rezdora, custode del bosco e della tavola",
     "resultQuote": "Hai già deciso che qualcuno deve mangiare. Non gli hai chiesto se ha fame.",
-    "adventureId": null
+    "adventureId": null,
+    "bio": [
+      "La Virginia la riconosci dal grembiule, che non si toglie mai neanche quando non serve a niente, e dalle mani — mani larghe, mani da sfoglia, mani che quando ti prendono per le spalle sai già che stai per sederti a tavola che tu lo voglia o meno. A Ventascolta la chiamano tutti \"la Virginia\" con l'articolo davanti, come si fa con le cose che ci sono da sempre, e i bambini del bosco la chiamano \"la Ginia\" perché Virginia è troppo lungo quando hai fame e devi urlarlo da lontano tra gli alberi. Di mestiere fa la rezdora, che a Ventascolta non è un mestiere ma un modo di tenere in piedi le cose: la casa, la tavola, chi ci sta intorno.",
+      "Conta i soldi veloce, col pollice, come fanno in Città e non a Ventascolta — è l'unica cosa che le è rimasta di quando lavorava sottopadrone, da giovane, perché a casa non c'era da mangiare per tutti e qualcuno doveva andare. Il resto della Città se l'è scrollato di dosso come farina dal grembiule: i registri, le botteghe, il modo che hanno di non guardarti negli occhi quando ti parlano. È tornata per Fernando, suo fratello, perché serviva, e quando serve non c'è nient'altro da decidere. Fernando adesso non c'è più, ma nel frattempo era Ventascolta intera ad aver bisogno di lei, e a quel punto chi glielo diceva di smettere.",
+      "Non chiama nessuno per nome: sei \"nani\" se sei piccolo, \"chera\" se ti vuole bene, \"stela\" se hai bisogno di qualcosa e non lo sai ancora. Ti mette davanti un piatto e non chiede se hai fame perché la risposta non cambia nulla — mangi, e se non mangi ti chiede cos'hai, e a quel punto è meglio mangiare. Lei mangia prima di tutti, in piedi in cucina, perché se si siede non si rialza più e c'è sempre qualcosa da sparecchiare. Se ti comporti male ti dà una platta — mano aperta, secca, più rumore che dolore — e cinque minuti dopo ti chiede se vuoi dell'altro pane come se non fosse successo niente.",
+      "Con Mazapégul ha un accordo che nessuno dei due ha mai formulato a voce: lui fa i suoi scherzi, sposta le sedie, fa sbattere le porte, e lei non dice niente purché stia fuori dalla dispensa. A volte gli lascia un piatto fuori dalla porta, la sera. Se qualcuno glielo fa notare, alza le spalle. \"Mangerà qualcuno.\"",
+      "Quando esce da Ventascolta ha sempre la testa a casa, come se avesse lasciato qualcosa sul fuoco. Senza la cucina e il bosco e le voci del mercato la Virginia è una donna con le mani vuote, e le mani vuote sono l'unica cosa che la spaventa davvero. A volte dice \"il mio Fernando diceva\" e poi finisce la frase con qualcosa che Fernando forse ha detto, o forse no, o forse l'ha portato il vento tra i rami la mattina presto. A Ventascolta, dove Mazapégul porta parole da un capo all'altro del bosco, nessuno le chiede mai dove le ha sentite."
+    ],
+    "stats": { "fisico": 5, "testa": 3, "vento": 5, "agilita": 2, "ferite": 6 },
+    "abilities": [
+      { "name": "Platta", "type": "Attacco ravvicinato", "desc": "1d8 + Fisico" },
+      { "name": "Matterello", "type": "Supporto in combattimento", "desc": "1d6: con 4+ il nemico attacca lei invece di un alleato" },
+      { "name": "Hanno detto che", "type": "Supporto", "desc": "+3 a raccogliere informazioni, scoprire bugie, leggere dinamiche sociali" },
+      { "name": "Sfoglia", "type": "Supporto", "desc": "+2 a curare, rimedi pratici, conoscenza del tempo e delle stagioni" }
+    ]
   }
 ]

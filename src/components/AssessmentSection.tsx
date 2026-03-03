@@ -1,9 +1,10 @@
-import { useState, useCallback, useMemo } from "react";
+import { useState, useCallback, useMemo, useEffect, useRef } from "react";
 import assessmentData from "@/data/assessment.json";
 import charactersData from "@/data/characters.json";
 import adventuresData from "@/data/adventures.json";
 import { Progress } from "@/components/ui/progress";
 import { ChevronLeft } from "lucide-react";
+import AssessmentResult from "@/components/AssessmentResult";
 
 type AppScreen = "soglia" | "porte" | "esplora" | "gioca" | "scopri";
 
@@ -13,17 +14,50 @@ interface AssessmentSectionProps {
 
 type Phase = "intro" | "questions" | "reveal" | "result";
 
+interface ShuffledQuestion {
+  originalIndex: number;
+  scenario: string;
+  area: string;
+  // options in shuffled order, each carrying its original weights
+  options: { text: string; weights: Record<string, number> }[];
+}
+
+function shuffleArray<T>(arr: T[]): T[] {
+  const a = [...arr];
+  for (let i = a.length - 1; i > 0; i--) {
+    const j = Math.floor(Math.random() * (i + 1));
+    [a[i], a[j]] = [a[j], a[i]];
+  }
+  return a;
+}
+
+function buildShuffledQuestions(): ShuffledQuestion[] {
+  const shuffledIndices = shuffleArray(assessmentData.map((_, i) => i));
+  return shuffledIndices.map(idx => {
+    const q = assessmentData[idx];
+    const opts = q.options as { text: string; weights: Record<string, number> }[];
+    return {
+      originalIndex: idx,
+      scenario: q.scenario,
+      area: q.area,
+      options: shuffleArray(opts),
+    };
+  });
+}
+
 const AssessmentSection = ({ onNavigate }: AssessmentSectionProps) => {
   const [phase, setPhase] = useState<Phase>("intro");
   const [currentQ, setCurrentQ] = useState(0);
   const [answers, setAnswers] = useState<number[]>([]);
   const [scores, setScores] = useState<Record<string, number>>({});
   const [slideDirection, setSlideDirection] = useState<"left" | "right">("left");
+  const [shuffledQuestions, setShuffledQuestions] = useState<ShuffledQuestion[]>(() => buildShuffledQuestions());
 
-  const totalQuestions = assessmentData.length;
-  const question = assessmentData[currentQ];
+  const totalQuestions = shuffledQuestions.length;
+  const question = shuffledQuestions[currentQ];
 
   const handleStart = useCallback(() => {
+    setShuffledQuestions(buildShuffledQuestions());
     setPhase("questions");
     setCurrentQ(0);
     setAnswers([]);
@@ -46,7 +80,6 @@ const AssessmentSection = ({ onNavigate }: AssessmentSectionProps) => {
       setSlideDirection("left");
       setCurrentQ(currentQ + 1);
     } else {
-      // Show reveal
       setPhase("reveal");
       setTimeout(() => setPhase("result"), 3000);
     }
@@ -55,10 +88,9 @@ const AssessmentSection = ({ onNavigate }: AssessmentSectionProps) => {
   const handleBack = useCallback(() => {
     if (currentQ > 0) {
       setSlideDirection("right");
-      // Undo scores from previous answer
       const prevAnswer = answers[currentQ - 1];
       if (prevAnswer !== undefined) {
-        const prevOption = assessmentData[currentQ - 1].options[prevAnswer];
+        const prevOption = shuffledQuestions[currentQ - 1].options[prevAnswer];
         const newScores = { ...scores };
         Object.entries(prevOption.weights).forEach(([charId, weight]) => {
           newScores[charId] = (newScores[charId] || 0) - weight;
@@ -67,9 +99,8 @@ const AssessmentSection = ({ onNavigate }: AssessmentSectionProps) => {
       }
       setCurrentQ(currentQ - 1);
     }
-  }, [currentQ, answers, scores]);
+  }, [currentQ, answers, scores, shuffledQuestions]);
 
-  // Calculate result
   const result = useMemo(() => {
     const sorted = Object.entries(scores).sort(([, a], [, b]) => b - a);
     if (sorted.length === 0) return null;
@@ -128,68 +159,13 @@ const AssessmentSection = ({ onNavigate }: AssessmentSectionProps) => {
 
   // RESULT
   if (phase === "result" && result?.first) {
-    const firstAdventure = result.first.adventureId
-      ? adventuresData.find(a => a.id === result.first!.adventureId)
-      : null;
-
     return (
-      <div className="max-w-xl mx-auto px-4 text-center">
-        {result.isTie && result.second ? (
-          <>
-            <p className="font-body italic text-foreground/70 mb-6">
-              La Piana esita. Sei a metà strada tra{" "}
-              <span style={{ color: 'hsl(175, 55%, 60%)' }}>{result.first.name}</span> e{" "}
-              <span style={{ color: 'hsl(175, 55%, 60%)' }}>{result.second.name}</span>{" "}
-              — il vento che ti porterà non ha ancora deciso da che parte soffiare.
-            </p>
-            {[result.first, result.second].map(char => (
-              <div key={char.id} className="foleda-card p-6 mb-4 text-left">
-                <h3 className="font-display text-2xl font-bold mb-1"
-                  style={{ color: 'hsl(175, 55%, 60%)' }}>
-                  {char.name}
-                </h3>
-                <p className="font-label text-sm text-muted-foreground mb-3">{char.regionName}</p>
-                <p className="font-body italic text-foreground/80">"{char.resultQuote}"</p>
-              </div>
-            ))}
-          </>
-        ) : (
-          <>
-            <h2 className="font-display text-5xl md:text-6xl font-bold mb-2 animate-scale-in"
-              style={{ color: 'hsl(175, 55%, 60%)' }}>
-              {result.first.name}
-            </h2>
-            <p className="font-label text-sm text-muted-foreground mb-6">{result.first.regionName}</p>
-            <p className="font-body text-xl italic text-foreground/80 leading-relaxed mb-10">
-              "{result.first.resultQuote}"
-            </p>
-          </>
-        )}
-
-        {/* Actions */}
-        <div className="space-y-3 mt-8">
-          {firstAdventure && (
-            <a href={firstAdventure.url} target="_blank" rel="noopener noreferrer"
-              className="block font-label text-sm text-accent hover:text-accent/80 transition-colors">
-              🎲 Gioca la sua avventura →
-            </a>
-          )}
-          <button
-            onClick={() => onNavigate("esplora", result.first!.regionId)}
-            className="block w-full font-label text-sm text-accent hover:text-accent/80 transition-colors"
-          >
-            🗺️ Esplora la sua regione →
-          </button>
-          <button onClick={handleStart}
-            className="block w-full font-label text-sm text-muted-foreground hover:text-foreground transition-colors">
-            🔄 Rifai il test
-          </button>
-          <button onClick={handleShare}
-            className="block w-full font-label text-sm text-muted-foreground hover:text-foreground transition-colors">
-            📋 Condividi (copia testo)
-          </button>
-        </div>
-      </div>
+      <AssessmentResult
+        result={result}
+        onNavigate={onNavigate}
+        onRestart={handleStart}
+        onShare={handleShare}
+      />
     );
   }
 
@@ -213,8 +189,8 @@ const AssessmentSection = ({ onNavigate }: AssessmentSectionProps) => {
         </button>
       )}
 
-      {/* Scenario */}
-      <div key={currentQ} className={slideDirection === "left" ? "slide-left-enter" : "slide-right-enter"}>
+      {/* Scenario — use currentQ as key to force full remount, clearing any selection state */}
+      <div key={`q-${currentQ}`} className={slideDirection === "left" ? "slide-left-enter" : "slide-right-enter"}>
         <p className="font-body text-lg md:text-xl italic text-foreground leading-relaxed mb-8">
           {question.scenario}
         </p>
@@ -223,7 +199,7 @@ const AssessmentSection = ({ onNavigate }: AssessmentSectionProps) => {
         <div className="space-y-3">
           {question.options.map((option, idx) => (
             <button
-              key={idx}
+              key={`${currentQ}-${idx}`}
               onClick={() => handleAnswer(idx)}
               className="foleda-card foleda-glow-hover w-full p-4 md:p-5 text-left cursor-pointer"
             >
