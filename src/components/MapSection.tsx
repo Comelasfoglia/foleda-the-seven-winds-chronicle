@@ -147,6 +147,8 @@ const MapSection = ({ targetRegionId, onClearTarget }: MapSectionProps) => {
       {/* Dice Roller */}
       <DiceRoller onResult={handleDiceResult} />
 
+      <ComelasfogliaFooter />
+
       {/* Region Modal */}
       {region && (
         <RegionModal
@@ -156,8 +158,6 @@ const MapSection = ({ targetRegionId, onClearTarget }: MapSectionProps) => {
           onClose={handleCloseModal}
         />
       )}
-
-      <ComelasfogliaFooter />
     </div>
   );
 };
