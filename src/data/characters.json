@@ -1,0 +1,66 @@
+[
+  {
+    "id": "acanto",
+    "name": "Solenne Acanto",
+    "regionId": "nordest",
+    "regionName": "L'Elfica Regione",
+    "resultQuote": "Hai visto la bugia prima che finisse. Alla corte elfica questo è un crimine.",
+    "adventureId": null
+  },
+  {
+    "id": "restio",
+    "name": "Restìo-33",
+    "regionId": "sudovest",
+    "regionName": "Il Deserto di Verderame",
+    "resultQuote": "Era rotto. Tu l'hai visto. Gli altri no.",
+    "adventureId": null
+  },
+  {
+    "id": "bruna",
+    "name": "Bruna",
+    "regionId": "nord",
+    "regionName": "I Picchi di Gelobrina",
+    "resultQuote": "Sai cosa ha qualcuno prima che lo sappia lui. Non è sempre una gentilezza.",
+    "adventureId": null
+  },
+  {
+    "id": "muda",
+    "name": "Muda",
+    "regionId": "est",
+    "regionName": "Le Gole del Tramonto",
+    "resultQuote": "Non stai mai ferma. Non perché non puoi — perché non vuoi sapere cosa succede quando ti fermi.",
+    "adventureId": null
+  },
+  {
+    "id": "cambiale",
+    "name": "Cambiale",
+    "regionId": "centro",
+    "regionName": "La Città",
+    "resultQuote": "Hai già contato le uscite, i bicchieri sul tavolo, e quanto vale il sorriso di chi ti sta davanti.",
+    "adventureId": null
+  },
+  {
+    "id": "lisca",
+    "name": "Lìsca",
+    "regionId": "sudest",
+    "regionName": "Porto Ardente",
+    "resultQuote": "Stai già ridendo. Non è un buon segno — per gli altri.",
+    "adventureId": "ombra-nessuno"
+  },
+  {
+    "id": "camillo",
+    "name": "Camillo Fermo",
+    "regionId": "nordovest",
+    "regionName": "La Città → Torbaviva",
+    "resultQuote": "Vieni dalla Città, ma la Piana ti porterà a Torbaviva. C'è un fascicolo che non torna.",
+    "adventureId": "torbaviva-resoconto"
+  },
+  {
+    "id": "virginia",
+    "name": "La Virginia",
+    "regionId": "ovest",
+    "regionName": "La Foresta di Ventascolta",
+    "resultQuote": "Hai già deciso che qualcuno deve mangiare. Non gli hai chiesto se ha fame.",
+    "adventureId": null
+  }
+]

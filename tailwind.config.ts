@@ -13,6 +13,11 @@ export default {
       },
     },
     extend: {
+      fontFamily: {
+        display: ['"Cormorant Garamond"', 'serif'],
+        body: ['"EB Garamond"', 'serif'],
+        label: ['"Lato"', 'sans-serif'],
+      },
       colors: {
         border: "hsl(var(--border))",
         input: "hsl(var(--input))",
@@ -57,6 +62,16 @@ export default {
           border: "hsl(var(--sidebar-border))",
           ring: "hsl(var(--sidebar-ring))",
         },
+        foleda: {
+          indigo: "hsl(var(--foleda-indigo))",
+          "indigo-light": "hsl(var(--foleda-indigo-light))",
+          cream: "hsl(var(--foleda-cream))",
+          "cream-dark": "hsl(var(--foleda-cream-dark))",
+          gold: "hsl(var(--foleda-gold))",
+          "gold-dark": "hsl(var(--foleda-gold-dark))",
+          cyan: "hsl(var(--foleda-cyan))",
+          "cyan-bright": "hsl(var(--foleda-cyan-bright))",
+        },
       },
       borderRadius: {
         lg: "var(--radius)",
@@ -65,20 +80,12 @@ export default {
       },
       keyframes: {
         "accordion-down": {
-          from: {
-            height: "0",
-          },
-          to: {
-            height: "var(--radix-accordion-content-height)",
-          },
+          from: { height: "0" },
+          to: { height: "var(--radix-accordion-content-height)" },
         },
         "accordion-up": {
-          from: {
-            height: "var(--radix-accordion-content-height)",
-          },
-          to: {
-            height: "0",
-          },
+          from: { height: "var(--radix-accordion-content-height)" },
+          to: { height: "0" },
         },
       },
       animation: {

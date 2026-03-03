@@ -1,0 +1,178 @@
+[
+  {
+    "id": 1,
+    "area": "Infanzia e Tradizioni",
+    "scenario": "È domenica, casa dei nonni, pranzo lungo. Gli adulti parlano tra di loro. Tu hai otto anni.",
+    "options": [
+      { "text": "Sei sotto il tavolo. C'è un mondo intero lì sotto, fatto di gambe di sedie e briciole e scarpe che non riconosci.", "weights": { "muda": 3, "restio": 1 } },
+      { "text": "Ascolti i grandi. Non capisci tutto, ma capisci chi dice la verità e chi no — dal tono, non dalle parole.", "weights": { "acanto": 3, "camillo": 2 } },
+      { "text": "Sei già in cortile. Il fosso, il muretto, il gatto del vicino — qualsiasi cosa è meglio che stare fermi.", "weights": { "lisca": 3, "muda": 2 } },
+      { "text": "Stai aiutando a sparecchiare. Nessuno te l'ha chiesto, ma i piatti non si portano via da soli.", "weights": { "virginia": 3, "bruna": 1, "restio": 1 } }
+    ]
+  },
+  {
+    "id": 2,
+    "area": "Infanzia e Tradizioni",
+    "scenario": "Un temporale d'estate. Sei bambino. La corrente è saltata. Le candele sono accese.",
+    "options": [
+      { "text": "È il momento migliore per le storie. Chiedi a qualcuno di raccontarne una, quella che fa paura.", "weights": { "cambiale": 2, "muda": 2, "lisca": 1 } },
+      { "text": "Guardi fuori dalla finestra. I lampi illuminano il giardino un secondo alla volta, e ogni volta il giardino è diverso.", "weights": { "camillo": 3, "acanto": 2 } },
+      { "text": "Cerchi la torcia e se non c'è ne costruisci una — con un barattolo, una candela e un pezzo di spago, perché le mani sanno fare cose che la testa non ha ancora pensato.", "weights": { "restio": 3, "bruna": 1 } },
+      { "text": "Ti piace. Il buio rende la casa più piccola e tutti più vicini. Il cane è sotto il tavolo. Gli fai posto.", "weights": { "virginia": 3, "bruna": 2 } }
+    ]
+  },
+  {
+    "id": 3,
+    "area": "Infanzia e Tradizioni",
+    "scenario": "In cantina, o in garage, o in quel ripostiglio dove nessuno metteva piede se non per cercare il cacciavite a stella, c'era una scatola che non era di nessuno.",
+    "options": [
+      { "text": "L'orologio. Lo giravi tra le mani, lo aprivi se potevi, cercavi di capire perché si era fermato e se c'era un modo di farlo ripartire.", "weights": { "restio": 3, "camillo": 1 } },
+      { "text": "Le fotografie. Chi erano? Dove? Quando? Non importava la risposta — importava che qualcuno avesse vissuto abbastanza da finire in una scatola in cantina.", "weights": { "cambiale": 2, "virginia": 2, "acanto": 1 } },
+      { "text": "La chiave. Te la mettevi in tasca e per il resto del pomeriggio ogni porta, ogni cassetto, ogni serratura era quella giusta.", "weights": { "lisca": 3, "muda": 2 } },
+      { "text": "Il libretto. Lo sfogliavi con la cura di chi sa che certe cose le puoi leggere ma non capire, e il bello era proprio quello.", "weights": { "camillo": 3, "acanto": 2 } }
+    ]
+  },
+  {
+    "id": 4,
+    "area": "Infanzia e Tradizioni",
+    "scenario": "Il cibo della nonna: troppo, sempre troppo, con quella frase — \"mangia, che sei magro\" — che non ammetteva replica.",
+    "options": [
+      { "text": "Mangiavi tutto, anche quando non ce la facevi più, perché lei aveva bisogno che tu mangiassi più di quanto tu avessi bisogno di smettere.", "weights": { "virginia": 2, "bruna": 3 } },
+      { "text": "Cercavi di negoziare, con quella diplomazia improvvisata dei bambini che sanno di avere torto ma ci provano lo stesso.", "weights": { "cambiale": 2, "acanto": 2, "camillo": 1 } },
+      { "text": "Il piatto non ti interessava quanto la cucina: il vapore, il rumore del mestolo contro la pentola, le mani che lavoravano senza guardare.", "weights": { "restio": 3, "camillo": 2 } },
+      { "text": "Mangiavi il più veloce possibile — non per fame e non per dovere, ma perché fuori c'era il cortile e il muretto e il fosso.", "weights": { "lisca": 3, "muda": 2 } }
+    ]
+  },
+  {
+    "id": 5,
+    "area": "Gioco di Ruolo come Esperienza",
+    "scenario": "Il master descrive una stanza. C'è una porta chiusa, un rumore dall'altra parte, e il gruppo non è d'accordo su cosa fare.",
+    "options": [
+      { "text": "Apri la porta. Se c'è qualcosa dall'altra parte, lo scoprirai quando lo vedi.", "weights": { "muda": 3, "lisca": 2 } },
+      { "text": "Proponi un piano — non perché il gruppo ti ascolterà, ma perché nel momento in cui dici i passi ad alta voce il rumore comincia ad avere una forma.", "weights": { "camillo": 3, "bruna": 2 } },
+      { "text": "Convinci qualcun altro ad aprire la porta per primo. Tu entri per secondo — è più sicuro e più furbo.", "weights": { "cambiale": 3, "lisca": 1 } },
+      { "text": "Chiedi al master di descrivere meglio il rumore. Forse non è un pericolo. Forse è qualcuno che ha bisogno di aiuto.", "weights": { "virginia": 2, "acanto": 2, "restio": 1 } }
+    ]
+  },
+  {
+    "id": 6,
+    "area": "Gioco di Ruolo come Esperienza",
+    "scenario": "Al tavolo, il tuo personaggio muore. Non è colpa del master, non è colpa dei dadi. Succede.",
+    "options": [
+      { "text": "Ti dispiace, ma in fondo è una bella storia. Una morte che ha senso vale più di una vittoria che non ce l'ha.", "weights": { "acanto": 3, "lisca": 2 } },
+      { "text": "Prendi il foglio e lo guardi per un tempo che non ha niente a che fare con la tristezza; poi lo pieghi con cura e cominci il prossimo.", "weights": { "restio": 3, "camillo": 2 } },
+      { "text": "Non dici niente, perché c'è una differenza tra le cose che se ne vanno e le cose che ti vengono tolte, e il tuo personaggio era la seconda.", "weights": { "bruna": 3, "muda": 2 } },
+      { "text": "Chiedi al master se puoi restare come fantasma, come PNG, come voce nella testa di qualcun altro. Non sei pronto a lasciare andare.", "weights": { "cambiale": 2, "virginia": 2, "muda": 1 } }
+    ]
+  },
+  {
+    "id": 7,
+    "area": "Gioco di Ruolo come Esperienza",
+    "scenario": "Il master vi presenta un PNG. È antipatico, scorbutico, non vi aiuta. Il gruppo vuole andare avanti. Tu però hai una sensazione.",
+    "options": [
+      { "text": "Lo ignori come gli altri. Il tuo istinto non vale il tempo del gruppo.", "weights": { "muda": 2, "lisca": 1 } },
+      { "text": "Gli fai una domanda — una sola, quella giusta, quella che non c'entra niente con la quest ma c'entra con lui.", "weights": { "bruna": 3, "virginia": 2 } },
+      { "text": "Ci parli da solo, dopo. I personaggi antipatici sono quelli con le storie migliori.", "weights": { "cambiale": 3, "lisca": 2 } },
+      { "text": "Non gli parli. Lo guardi muoversi: dove tiene le mani, in che direzione gira gli occhi quando il gruppo fa rumore.", "weights": { "camillo": 3, "acanto": 3 } }
+    ]
+  },
+  {
+    "id": 8,
+    "area": "Gioco di Ruolo come Esperienza",
+    "scenario": "Fine della sessione. È tardi. Tutti si alzano. Ma la storia non è finita — siete nel mezzo.",
+    "options": [
+      { "text": "Stai già pensando a cosa farà il tuo personaggio la prossima volta. Lo sai prima di uscire dalla porta.", "weights": { "muda": 3, "cambiale": 2 } },
+      { "text": "Non pensi alla prossima volta. Pensi a stasera — a quel momento in cui tutto è andato nel verso sbagliato e si è trasformato in qualcos'altro.", "weights": { "acanto": 3, "camillo": 2 } },
+      { "text": "Metti via i dadi, le mappe, i bicchieri — e c'è una gentilezza in questo gesto che gli altri non vedono.", "weights": { "restio": 3, "bruna": 1 } },
+      { "text": "Parli con gli altri. Del gioco, ma anche no. Le sessioni migliori finiscono con le chiacchiere che non c'entrano niente.", "weights": { "virginia": 3, "lisca": 2 } }
+    ]
+  },
+  {
+    "id": 9,
+    "area": "Il Senso della Scoperta",
+    "scenario": "Stai leggendo un libro. C'è una mappa all'inizio. Non tutti i luoghi sulla mappa compaiono nella storia.",
+    "options": [
+      { "text": "Quei luoghi sono i tuoi preferiti. Li immagini tu. La storia vera è quella che il libro non racconta.", "weights": { "lisca": 2, "muda": 2, "acanto": 1 } },
+      { "text": "Li segni — con la matita, sul margine, con quel piacere silenzioso di chi sa che un giorno quella nota varrà qualcosa.", "weights": { "camillo": 3, "restio": 2 } },
+      { "text": "Ti chiedi perché l'autore li ha messi. Ogni dettaglio inutile è un dettaglio che mente.", "weights": { "acanto": 3, "cambiale": 2 } },
+      { "text": "Non ci fai caso. La storia ti ha preso, e le storie sono fatte di persone, non di mappe.", "weights": { "virginia": 3, "bruna": 2 } }
+    ]
+  },
+  {
+    "id": 10,
+    "area": "Il Senso della Scoperta",
+    "scenario": "Da bambino, un posto ti spaventava. Un corridoio, una cantina, un pezzo di bosco. Ci sei tornato da grande.",
+    "options": [
+      { "text": "Non fa più paura. E questo è un po' triste, perché la paura era anche meraviglia.", "weights": { "lisca": 2, "muda": 3 } },
+      { "text": "Fa ancora paura. Non come prima — peggio, perché adesso sai dare un nome alle cose e i nomi non aiutano.", "weights": { "acanto": 3, "camillo": 2 } },
+      { "text": "Non ci sei mai tornato, e non per paura — per rispetto; perché quel posto appartiene al bambino che eri.", "weights": { "bruna": 3, "virginia": 1 } },
+      { "text": "Ci sei tornato, e hai trovato la cosa: una macchia sul muro, un tubo che fischiava, una porta che non chiudeva bene.", "weights": { "restio": 2, "camillo": 2, "cambiale": 1 } }
+    ]
+  },
+  {
+    "id": 11,
+    "area": "Il Senso della Scoperta",
+    "scenario": "Ti perdi. Non in un posto pericoloso — in un posto nuovo. Strade che non conosci, facce che non hai mai visto.",
+    "options": [
+      { "text": "Cammini. Non hai bisogno di sapere dove stai andando per sapere che stai andando nel verso giusto.", "weights": { "lisca": 3, "cambiale": 1 } },
+      { "text": "Cerchi un punto alto. Un campanile, una collina, qualcosa da cui vedere il quadro intero.", "weights": { "camillo": 3, "acanto": 2 } },
+      { "text": "Chiedi a qualcuno. La gente del posto sa cose che nessuna mappa può dirti.", "weights": { "virginia": 3, "cambiale": 2 } },
+      { "text": "Annusi l'aria. Segui il rumore. I sensi sanno cose prima della testa.", "weights": { "muda": 3, "bruna": 2 } }
+    ]
+  },
+  {
+    "id": 12,
+    "area": "Il Senso della Scoperta",
+    "scenario": "In una storia, il drago non è cattivo. Ha le sue ragioni. L'eroe lo scopre troppo tardi.",
+    "options": [
+      { "text": "È la storia migliore. Le storie dove nessuno ha torto sono le uniche che vale la pena raccontare.", "weights": { "acanto": 3, "cambiale": 1 } },
+      { "text": "È la storia che ti resta addosso — non perché è triste, ma perché è l'unica onesta.", "weights": { "bruna": 3, "restio": 2 } },
+      { "text": "Ti chiedi se l'eroe lo sapeva — se da qualche parte c'era il dettaglio che cambiava tutto.", "weights": { "camillo": 3, "acanto": 1 } },
+      { "text": "Ti chiedi cosa fa l'eroe dopo. Uccidere il drago era la parte facile. Vivere con la risposta è la parte vera.", "weights": { "virginia": 2, "lisca": 2, "muda": 1 } }
+    ]
+  },
+  {
+    "id": 13,
+    "area": "Videogiochi",
+    "scenario": "Un PNG in un gioco ti dà un oggetto. Non serve a niente. Non ha statistiche. Non puoi rivenderlo. \"Tieni, è per te,\" dice.",
+    "options": [
+      { "text": "Lo tieni — in fondo all'inventario, dove non dà fastidio a nessuno, per tutto il gioco, fino ai titoli di coda.", "weights": { "virginia": 3, "restio": 2 } },
+      { "text": "Lo giri tra le mani — nella descrizione, nell'inventario, nel menu che nessuno apre mai — perché gli oggetti senza funzione sono i più interessanti.", "weights": { "camillo": 3, "bruna": 1 } },
+      { "text": "Lo lasci nell'inventario e te ne dimentichi. Se serviva, te ne accorgerai.", "weights": { "lisca": 2, "muda": 3 } },
+      { "text": "Torni a parlargli. Se ti ha dato un oggetto, forse ha qualcos'altro da dire.", "weights": { "cambiale": 3, "acanto": 2 } }
+    ]
+  },
+  {
+    "id": 14,
+    "area": "Videogiochi",
+    "scenario": "Quel livello. Quello che non riesci a passare. Ci hai provato dieci volte. Venti.",
+    "options": [
+      { "text": "Una volta in più — e non è caparbietà, è che ogni volta che riprovi le mani fanno una cosa leggermente diversa.", "weights": { "restio": 3, "bruna": 2 } },
+      { "text": "Ti fermi. Spegni. Ci dormi sopra — perché la distanza è una lente, e domani vedrai il pattern.", "weights": { "camillo": 2, "bruna": 1, "acanto": 1 } },
+      { "text": "Guardi come lo fa qualcun altro. Non per copiare — per capire cosa stai sbagliando.", "weights": { "acanto": 2, "virginia": 2, "cambiale": 1 } },
+      { "text": "Cambi strategia. Se il muro non si butta giù di forza, forse ci si passa sotto. O intorno. O sopra.", "weights": { "lisca": 3, "cambiale": 2, "muda": 1 } }
+    ]
+  },
+  {
+    "id": 15,
+    "area": "Videogiochi",
+    "scenario": "Hai finito un gioco. I titoli di coda scorrono. Il controller è ancora in mano.",
+    "options": [
+      { "text": "Resti seduto mentre i nomi scorrono — i designer, i programmatori — e non li conoscerai mai ma gli vuoi bene.", "weights": { "restio": 2, "virginia": 2, "bruna": 1 } },
+      { "text": "Ricominci subito. C'è qualcosa che ti sei perso, un sentiero che non hai preso, una porta che non hai aperto.", "weights": { "muda": 3, "lisca": 2 } },
+      { "text": "Spegni e esci — fuori, dove l'aria è diversa, perché certe cose le capisci solo dopo che le hai lasciate andare.", "weights": { "camillo": 3, "bruna": 2 } },
+      { "text": "Cerchi qualcuno con cui parlarne. Non per spiegarlo — per sapere se ha sentito quello che hai sentito tu.", "weights": { "cambiale": 2, "acanto": 2, "virginia": 1 } }
+    ]
+  },
+  {
+    "id": 16,
+    "area": "Videogiochi",
+    "scenario": "C'è un posto, in un gioco, dove la musica si ferma. Nessun nemico. Nessun puzzle. Solo silenzio e una strada che va avanti.",
+    "options": [
+      { "text": "Vai avanti. Il silenzio è una promessa, non una minaccia.", "weights": { "lisca": 2, "muda": 3 } },
+      { "text": "Ti fermi. Guardi. Ascolti cosa c'è dentro il silenzio, perché il silenzio non è mai davvero vuoto.", "weights": { "acanto": 3, "camillo": 2 } },
+      { "text": "Torni indietro — non per paura, per cura; perché il silenzio è il gioco che ti dice fermati, guarda cosa hai attraversato.", "weights": { "restio": 2, "camillo": 2, "cambiale": 1 } },
+      { "text": "Salvi. Poi vai avanti — con le mani un po' più strette e la schiena un po' più dritta.", "weights": { "bruna": 3, "virginia": 2 } }
+    ]
+  }
+]

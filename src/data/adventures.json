@@ -1,0 +1,24 @@
+[
+  {
+    "id": "ombra-nessuno",
+    "title": "Ombra, Nessuno, Centomila Ombre",
+    "type": "Avventura in solitaria",
+    "character": "Lìsca",
+    "characterId": "lisca",
+    "regionId": "sudest",
+    "regionName": "Porto Ardente",
+    "quote": "A Porto Ardente le ombre hanno più di un padrone. Lìsca lo sa. Forse è per questo che non dorme mai con le spalle alla porta.",
+    "url": "#"
+  },
+  {
+    "id": "torbaviva-resoconto",
+    "title": "Torbaviva: Resoconto di un Viaggio",
+    "type": "Avventura in solitaria",
+    "character": "Camillo Fermo",
+    "characterId": "camillo",
+    "regionId": "nordovest",
+    "regionName": "La Palude di Torbaviva",
+    "quote": "Camillo Fermo non voleva partire. I moduli erano in ordine, i registri aggiornati. E poi il fulmine è caduto nel posto sbagliato.",
+    "url": "#"
+  }
+]
