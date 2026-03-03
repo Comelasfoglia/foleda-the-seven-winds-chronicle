@@ -14,8 +14,8 @@ export default {
     },
     extend: {
       fontFamily: {
-        display: ['"Cormorant Garamond"', 'serif'],
-        body: ['"EB Garamond"', 'serif'],
+        display: ['"Almendra"', 'serif'],
+        body: ['"Literata"', 'serif'],
         label: ['"Lato"', 'sans-serif'],
       },
       colors: {

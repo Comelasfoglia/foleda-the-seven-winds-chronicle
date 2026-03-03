@@ -61,21 +61,21 @@
 
   body {
     @apply bg-background text-foreground;
-    font-family: 'EB Garamond', serif;
+    font-family: 'Literata', serif;
   }
 
   h1, h2, h3, h4, h5, h6 {
-    font-family: 'Cormorant Garamond', serif;
+    font-family: 'Almendra', serif;
   }
 }
 
 @layer components {
   .font-display {
-    font-family: 'Cormorant Garamond', serif;
+    font-family: 'Almendra', serif;
   }
 
   .font-body {
-    font-family: 'EB Garamond', serif;
+    font-family: 'Literata', serif;
   }
 
   .font-label {
