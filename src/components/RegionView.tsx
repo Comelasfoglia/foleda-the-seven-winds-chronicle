@@ -2,6 +2,7 @@ import { useState, useCallback, useRef, useEffect } from "react";
 import { ChevronLeft } from "lucide-react";
 import SubLocationBalloon from "@/components/SubLocationBalloon";
 import adventuresData from "@/data/adventures.json";
+import FormattedText from "@/components/FormattedText";
 
 interface SubLocation {
   number: number;
@@ -303,9 +304,7 @@ const RegionView = ({ region, initialSubLocation, diceBadge, onBack }: RegionVie
 
       {/* Region description */}
       <div className="w-full max-w-2xl mb-6">
-        <div className="font-body text-foreground/80 leading-relaxed text-sm">
-          {region.description}
-        </div>
+        <FormattedText text={region.description} className="font-body text-foreground/80 leading-relaxed text-sm" />
         <blockquote
           className="font-body italic text-foreground/50 border-l-2 pl-4 mt-4 text-sm"
           style={{ borderColor: region.color }}
