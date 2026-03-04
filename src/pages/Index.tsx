@@ -5,6 +5,7 @@ import NavBar from "@/components/NavBar";
 import MapSection from "@/components/MapSection";
 import AdventuresSection from "@/components/AdventuresSection";
 import AssessmentSection from "@/components/AssessmentSection";
+import MagicParticles from "@/components/MagicParticles";
 
 type AppScreen = "soglia" | "porte" | "esplora" | "gioca" | "scopri";
 
@@ -30,6 +31,7 @@ const Index = () => {
   return (
     <div className="min-h-screen bg-background texture-wood vignette relative overflow-hidden"
       style={{ background: 'linear-gradient(180deg, hsl(252, 40%, 14%) 0%, hsl(270, 30%, 18%) 100%)' }}>
+      <MagicParticles />
       <div className={`relative z-10 transition-opacity duration-500 ${fadeOut ? 'opacity-0' : 'opacity-100'}`}>
         {screen === "soglia" && (
           <SogliaPage onEnter={() => transitionTo("porte")} />
