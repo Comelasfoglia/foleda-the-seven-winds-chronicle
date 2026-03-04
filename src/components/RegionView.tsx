@@ -179,10 +179,28 @@ const RegionView = ({ region, initialSubLocation, diceBadge, onBack }: RegionVie
 
         {/* SVG hotspot overlay */}
         <svg viewBox="0 0 100 100" preserveAspectRatio="none" className="absolute inset-0 w-full h-full">
+          <defs>
+            <radialGradient id="hotspot-glow">
+              <stop offset="0%" stopColor="hsla(42, 52%, 70%, 0.4)" />
+              <stop offset="60%" stopColor="hsla(175, 45%, 60%, 0.15)" />
+              <stop offset="100%" stopColor="hsla(175, 45%, 60%, 0)" />
+            </radialGradient>
+            <style>{`
+              @keyframes hotspot-pulse {
+                0%, 100% { opacity: 0.5; r: 4.5; }
+                50% { opacity: 1; r: 6; }
+              }
+              @keyframes hotspot-core-pulse {
+                0%, 100% { opacity: 0.7; filter: drop-shadow(0 0 1px hsla(42, 52%, 70%, 0.4)); }
+                50% { opacity: 1; filter: drop-shadow(0 0 3px hsla(42, 52%, 70%, 0.7)); }
+              }
+            `}</style>
+          </defs>
           {regionHotspots.map((hs, idx) => {
             const isHovered = hoveredHotspot === idx;
             const isSelected = selectedSubIdx === idx;
             const subName = allSubLocations[idx]?.name || "";
+            const delay = `${idx * 0.4}s`;
             return (
               <g key={hs.number}
                 onMouseEnter={() => setHoveredHotspot(idx)}
@@ -190,34 +208,47 @@ const RegionView = ({ region, initialSubLocation, diceBadge, onBack }: RegionVie
                 onClick={() => handleHotspotClick(idx)}
                 className="cursor-pointer"
               >
-                {/* Outer glow ring */}
+                {/* Pulsing outer glow */}
                 <circle
                   cx={hs.x}
                   cy={hs.y}
                   r={5}
-                  fill="none"
-                  stroke="hsla(0, 0%, 100%, 0.2)"
-                  strokeWidth={0.3}
+                  fill="url(#hotspot-glow)"
+                  stroke="none"
                   style={{
-                    transition: "all 300ms",
-                    opacity: isHovered || isSelected ? 1 : 0.6,
-                    transform: isHovered ? "scale(1.2)" : "scale(1)",
+                    animation: `hotspot-pulse 3s ease-in-out ${delay} infinite`,
                     transformOrigin: `${hs.x}px ${hs.y}px`,
+                    ...(isHovered || isSelected ? { opacity: 1, r: 7 } : {}),
+                  }}
+                />
+                {/* Outer ring */}
+                <circle
+                  cx={hs.x}
+                  cy={hs.y}
+                  r={4.5}
+                  fill="none"
+                  stroke="hsla(42, 52%, 70%, 0.25)"
+                  strokeWidth={0.25}
+                  style={{
+                    animation: `hotspot-pulse 3s ease-in-out ${delay} infinite`,
+                    transformOrigin: `${hs.x}px ${hs.y}px`,
+                    transition: "all 300ms",
+                    ...(isHovered || isSelected ? { stroke: "hsla(42, 52%, 70%, 0.6)", strokeWidth: 0.4 } : {}),
                   }}
                 />
                 {/* Main circle */}
                 <circle
                   cx={hs.x}
                   cy={hs.y}
-                  r={3.2}
-                  fill={isHovered || isSelected ? "hsla(0, 0%, 100%, 0.3)" : "hsla(0, 0%, 100%, 0.12)"}
-                  stroke={isHovered || isSelected ? "hsla(0, 0%, 100%, 1)" : "hsla(0, 0%, 100%, 0.7)"}
-                  strokeWidth={isHovered || isSelected ? 0.7 : 0.5}
+                  r={2.8}
+                  fill={isHovered || isSelected ? "hsla(42, 52%, 70%, 0.35)" : "hsla(42, 52%, 70%, 0.12)"}
+                  stroke={isHovered || isSelected ? "hsla(42, 52%, 80%, 1)" : "hsla(42, 52%, 70%, 0.7)"}
+                  strokeWidth={isHovered || isSelected ? 0.6 : 0.4}
                   style={{
+                    animation: `hotspot-core-pulse 3s ease-in-out ${delay} infinite`,
                     transition: "all 200ms",
-                    transform: isHovered ? "scale(1.2)" : "scale(1)",
+                    transform: isHovered ? "scale(1.15)" : "scale(1)",
                     transformOrigin: `${hs.x}px ${hs.y}px`,
-                    filter: isHovered || isSelected ? "drop-shadow(0 0 3px hsla(0, 0%, 100%, 0.5))" : "drop-shadow(0 0 1.5px hsla(0, 0%, 0%, 0.6))",
                   }}
                 />
                 {/* Hover label */}
@@ -230,7 +261,7 @@ const RegionView = ({ region, initialSubLocation, diceBadge, onBack }: RegionVie
                       height={3.5}
                       rx={0.8}
                       fill="hsla(0, 0%, 5%, 0.92)"
-                      stroke="hsla(0, 0%, 100%, 0.3)"
+                      stroke="hsla(42, 52%, 70%, 0.3)"
                       strokeWidth={0.2}
                       className="pointer-events-none"
                     />
@@ -238,7 +269,7 @@ const RegionView = ({ region, initialSubLocation, diceBadge, onBack }: RegionVie
                       x={hs.x}
                       y={hs.y - 5.5}
                       textAnchor="middle"
-                      fill="hsla(0, 0%, 95%, 1)"
+                      fill="hsla(42, 52%, 80%, 1)"
                       fontSize="1.8"
                       fontFamily="inherit"
                       className="pointer-events-none select-none"
