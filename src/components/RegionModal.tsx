@@ -1,6 +1,7 @@
 import { useState, useCallback } from "react";
 import { X, ChevronLeft, ChevronRight } from "lucide-react";
 import adventuresData from "@/data/adventures.json";
+import FormattedText from "./FormattedText";
 
 interface SubLocation {
   number: number;
@@ -98,9 +99,7 @@ const RegionModal = ({ region, initialSubLocation, diceBadge, onClose }: RegionM
               Spirito: {region.spirit} · Direzione: {region.direction}
             </p>
 
-            <div className="font-body text-foreground/90 leading-relaxed mb-8 whitespace-pre-line">
-              {region.description}
-            </div>
+            <FormattedText text={region.description} className="font-body text-foreground/90 leading-relaxed mb-8" />
 
             {/* Sub-locations grid */}
             <h3 className="font-display text-xl font-semibold text-foreground mb-4">
@@ -187,9 +186,7 @@ const RegionModal = ({ region, initialSubLocation, diceBadge, onClose }: RegionM
               <p className="font-label text-sm text-muted-foreground mb-6">
                 {region.name} · {region.direction}
               </p>
-              <div className="font-body text-foreground/90 leading-relaxed mb-8">
-                {currentSub.description}
-              </div>
+              <FormattedText text={currentSub.description} className="font-body text-foreground/90 leading-relaxed mb-8" />
 
               {/* Prev/Next navigation */}
               <div className="flex justify-between items-center pt-4 border-t"
