@@ -1,6 +1,6 @@
 import { useState, useEffect, useCallback } from "react";
 import regionsData from "@/data/regions.json";
-import RegionModal from "@/components/RegionModal";
+import RegionView from "@/components/RegionView";
 import DiceRoller from "@/components/DiceRoller";
 import ComelasfogliaFooter from "@/components/ComelasfogliaFooter";
 import mappaFoleda from "@/assets/mappa-foleda.png";
@@ -69,127 +69,133 @@ const regionPolygons: Record<string, { points: string; color: string; label: str
 
 const MapSection = ({ targetRegionId, onClearTarget }: MapSectionProps) => {
   const [hoveredRegion, setHoveredRegion] = useState<string | null>(null);
-  const [selectedRegion, setSelectedRegion] = useState<string | null>(null);
+  const [selectedRegionId, setSelectedRegionId] = useState<string | null>(null);
   const [selectedSubLocation, setSelectedSubLocation] = useState<number | null>(null);
   const [diceBadge, setDiceBadge] = useState<{ d8: number; d6: number } | null>(null);
+  const [transitioning, setTransitioning] = useState(false);
 
   useEffect(() => {
     if (targetRegionId) {
-      setSelectedRegion(targetRegionId);
+      transitionToRegion(targetRegionId);
       onClearTarget();
     }
   }, [targetRegionId, onClearTarget]);
+
+  const transitionToRegion = useCallback((regionId: string, subLoc?: number | null) => {
+    setTransitioning(true);
+    setTimeout(() => {
+      setSelectedRegionId(regionId);
+      setSelectedSubLocation(subLoc ?? null);
+      setTransitioning(false);
+    }, 300);
+  }, []);
+
+  const transitionToMap = useCallback(() => {
+    setTransitioning(true);
+    setTimeout(() => {
+      setSelectedRegionId(null);
+      setSelectedSubLocation(null);
+      setDiceBadge(null);
+      setTransitioning(false);
+    }, 300);
+  }, []);
 
   const handleDiceResult = useCallback((d8: number, d6: number) => {
     const regionIds = ["nord", "nordest", "est", "sudest", "sud", "sudovest", "ovest", "nordovest"];
     const regionId = regionIds[d8 - 1];
     setDiceBadge({ d8, d6 });
-    setSelectedRegion(regionId);
-    setSelectedSubLocation(d6);
-  }, []);
+    transitionToRegion(regionId, d6);
+  }, [transitionToRegion]);
 
-  const handleCloseModal = useCallback(() => {
-    setSelectedRegion(null);
-    setSelectedSubLocation(null);
-    setDiceBadge(null);
-  }, []);
-
-  const region = selectedRegion ? regionsData.find(r => r.id === selectedRegion) : null;
+  const region = selectedRegionId ? regionsData.find(r => r.id === selectedRegionId) : null;
 
   return (
     <div className="relative flex flex-col items-center px-4">
-      <h2 className="font-display text-3xl md:text-4xl font-semibold text-foreground mb-2 text-center">
-        La Piana dei Sette Venti
-      </h2>
-      <p className="font-body text-base italic text-muted-foreground mb-8 text-center">
-        Tocca una regione per esplorarla.
-      </p>
+      <div className={`w-full transition-opacity duration-300 ${transitioning ? 'opacity-0' : 'opacity-100'}`}>
+        {!selectedRegionId ? (
+          /* Level 0: Full map */
+          <>
+            <h2 className="font-display text-3xl md:text-4xl font-semibold text-foreground mb-2 text-center">
+              La Piana dei Sette Venti
+            </h2>
+            <p className="font-body text-base italic text-muted-foreground mb-8 text-center">
+              Tocca una regione per esplorarla.
+            </p>
 
-      {/* Map container */}
-      <div className="relative w-full max-w-lg mx-auto">
-        <img
-          src={mappaFoleda}
-          alt="Mappa della Piana dei Sette Venti"
-          className="w-full h-auto block"
-          draggable={false}
-        />
-        {/* Vignette overlay */}
-        <div
-          className="absolute inset-0 pointer-events-none"
-          style={{
-            boxShadow: "inset 0 0 80px 30px rgba(0,0,0,0.7)",
-          }}
-        />
-
-        {/* SVG overlay */}
-        <svg
-          viewBox="0 0 100 100"
-          preserveAspectRatio="none"
-          className="absolute inset-0 w-full h-full"
-        >
-          {Object.entries(regionPolygons).map(([id, { points, color }]) => {
-            const isHovered = hoveredRegion === id;
-            return (
-              <polygon
-                key={id}
-                points={points}
-                fill={isHovered ? color : "transparent"}
-                fillOpacity={isHovered ? 0.25 : 0}
-                stroke="transparent"
-                className="cursor-pointer"
-                style={{ transition: "fill-opacity 300ms, fill 300ms" }}
-                onMouseEnter={() => setHoveredRegion(id)}
-                onMouseLeave={() => setHoveredRegion(null)}
-                onClick={() => {
-                  setSelectedRegion(id);
-                  setSelectedSubLocation(null);
-                  setDiceBadge(null);
-                }}
+            <div className="relative w-full max-w-lg mx-auto">
+              <img
+                src={mappaFoleda}
+                alt="Mappa della Piana dei Sette Venti"
+                className="w-full h-auto block"
+                draggable={false}
               />
-            );
-          })}
-          {/* Hover label */}
-          {hoveredRegion && regionPolygons[hoveredRegion] && (
-            <g style={{ pointerEvents: "none" }}>
-              <rect
-                x={regionPolygons[hoveredRegion].labelPos[0] - 0.5}
-                y={regionPolygons[hoveredRegion].labelPos[1] - 3.2}
-                width={regionPolygons[hoveredRegion].label.length * 1.05 + 1}
-                height={4.5}
-                rx={1}
-                fill="hsl(0 0% 5% / 0.85)"
-                transform={`translate(${-(regionPolygons[hoveredRegion].label.length * 1.05 + 1) / 2 + 0.5}, 0)`}
+              <div
+                className="absolute inset-0 pointer-events-none"
+                style={{ boxShadow: "inset 0 0 80px 30px rgba(0,0,0,0.7)" }}
               />
-              <text
-                x={regionPolygons[hoveredRegion].labelPos[0]}
-                y={regionPolygons[hoveredRegion].labelPos[1]}
-                textAnchor="middle"
-                fill="white"
-                fontSize="2.4"
-                fontFamily="inherit"
-                style={{ transition: "opacity 200ms", opacity: 1 }}
-              >
-                {regionPolygons[hoveredRegion].label}
-              </text>
-            </g>
-          )}
-        </svg>
+              <svg viewBox="0 0 100 100" preserveAspectRatio="none" className="absolute inset-0 w-full h-full">
+                {Object.entries(regionPolygons).map(([id, { points, color }]) => {
+                  const isHovered = hoveredRegion === id;
+                  return (
+                    <polygon
+                      key={id}
+                      points={points}
+                      fill={isHovered ? color : "transparent"}
+                      fillOpacity={isHovered ? 0.25 : 0}
+                      stroke="transparent"
+                      className="cursor-pointer"
+                      style={{ transition: "fill-opacity 300ms, fill 300ms" }}
+                      onMouseEnter={() => setHoveredRegion(id)}
+                      onMouseLeave={() => setHoveredRegion(null)}
+                      onClick={() => {
+                        setDiceBadge(null);
+                        transitionToRegion(id);
+                      }}
+                    />
+                  );
+                })}
+                {hoveredRegion && regionPolygons[hoveredRegion] && (
+                  <g style={{ pointerEvents: "none" }}>
+                    <rect
+                      x={regionPolygons[hoveredRegion].labelPos[0] - 0.5}
+                      y={regionPolygons[hoveredRegion].labelPos[1] - 3.2}
+                      width={regionPolygons[hoveredRegion].label.length * 1.05 + 1}
+                      height={4.5}
+                      rx={1}
+                      fill="hsl(0 0% 5% / 0.85)"
+                      transform={`translate(${-(regionPolygons[hoveredRegion].label.length * 1.05 + 1) / 2 + 0.5}, 0)`}
+                    />
+                    <text
+                      x={regionPolygons[hoveredRegion].labelPos[0]}
+                      y={regionPolygons[hoveredRegion].labelPos[1]}
+                      textAnchor="middle"
+                      fill="white"
+                      fontSize="2.4"
+                      fontFamily="inherit"
+                      style={{ transition: "opacity 200ms", opacity: 1 }}
+                    >
+                      {regionPolygons[hoveredRegion].label}
+                    </text>
+                  </g>
+                )}
+              </svg>
+            </div>
+          </>
+        ) : (
+          /* Level 1: Region view with hotspots */
+          region && (
+            <RegionView
+              region={region}
+              initialSubLocation={selectedSubLocation}
+              diceBadge={diceBadge}
+              onBack={transitionToMap}
+            />
+          )
+        )}
       </div>
 
-      {/* Dice Roller */}
       <DiceRoller onResult={handleDiceResult} />
-
       <ComelasfogliaFooter />
-
-      {/* Region Modal */}
-      {region && (
-        <RegionModal
-          region={region}
-          initialSubLocation={selectedSubLocation}
-          diceBadge={diceBadge}
-          onClose={handleCloseModal}
-        />
-      )}
     </div>
   );
 };
