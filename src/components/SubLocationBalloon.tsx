@@ -1,6 +1,7 @@
 import { useRef, useEffect, useState, useCallback } from "react";
 import { X, ChevronLeft, ChevronRight } from "lucide-react";
 import { useIsMobile } from "@/hooks/use-mobile";
+import FormattedText from "@/components/FormattedText";
 
 interface SubLocation {
   number: number;
@@ -71,9 +72,7 @@ const SubLocationBalloon = ({
           </div>
           <h3 className="font-display text-xl font-bold text-foreground mb-1">{subLocation.name}</h3>
           <p className="font-label text-xs text-primary/60 mb-4">{regionName} · {regionDirection}</p>
-          <div className="font-body text-foreground/90 leading-relaxed text-sm mb-4">
-            {subLocation.description}
-          </div>
+          <FormattedText text={subLocation.description} className="font-body text-foreground/90 leading-relaxed text-sm mb-4" />
           <div className="flex justify-between items-center pt-3" style={{ borderTop: '1px solid hsla(42, 52%, 51%, 0.15)' }}>
             {currentIndex > 0 ? (
               <button onClick={onPrev} className="font-label text-xs text-muted-foreground hover:text-foreground flex items-center gap-1">
@@ -153,9 +152,7 @@ const SubLocationBalloon = ({
       </div>
       <h3 className="font-display text-lg font-bold text-foreground mb-1">{subLocation.name}</h3>
       <p className="font-label text-xs text-primary/60 mb-3">{regionName} · {regionDirection}</p>
-      <div className="font-body text-foreground/90 leading-relaxed text-sm mb-3">
-        {subLocation.description}
-      </div>
+      <FormattedText text={subLocation.description} className="font-body text-foreground/90 leading-relaxed text-sm mb-3" />
       <div className="flex justify-between items-center pt-2" style={{ borderTop: '1px solid hsla(42, 52%, 51%, 0.15)' }}>
         {currentIndex > 0 ? (
           <button onClick={onPrev} className="font-label text-xs text-muted-foreground hover:text-foreground flex items-center gap-1">
