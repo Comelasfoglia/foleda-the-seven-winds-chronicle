@@ -186,9 +186,9 @@ const RegionView = ({ region, initialSubLocation, diceBadge, onBack }: RegionVie
               <stop offset="100%" stopColor="hsla(175, 45%, 60%, 0)" />
             </radialGradient>
             <radialGradient id="hotspot-glow-dark">
-              <stop offset="0%" stopColor="hsla(260, 40%, 25%, 0.6)" />
-              <stop offset="60%" stopColor="hsla(280, 30%, 15%, 0.3)" />
-              <stop offset="100%" stopColor="hsla(280, 30%, 15%, 0)" />
+              <stop offset="0%" stopColor="hsla(35, 50%, 30%, 0.5)" />
+              <stop offset="60%" stopColor="hsla(30, 45%, 25%, 0.2)" />
+              <stop offset="100%" stopColor="hsla(30, 45%, 25%, 0)" />
             </radialGradient>
             <style>{`
               @keyframes hotspot-pulse {
@@ -200,8 +200,8 @@ const RegionView = ({ region, initialSubLocation, diceBadge, onBack }: RegionVie
                 50% { opacity: 1; filter: drop-shadow(0 0 3px hsla(42, 52%, 70%, 0.7)); }
               }
               @keyframes hotspot-core-pulse-dark {
-                0%, 100% { opacity: 0.7; filter: drop-shadow(0 0 1px hsla(260, 40%, 20%, 0.5)); }
-                50% { opacity: 1; filter: drop-shadow(0 0 4px hsla(260, 40%, 15%, 0.8)); }
+                0%, 100% { opacity: 0.7; filter: drop-shadow(0 0 1px hsla(35, 50%, 30%, 0.4)); }
+                50% { opacity: 1; filter: drop-shadow(0 0 4px hsla(30, 45%, 25%, 0.7)); }
               }
             `}</style>
           </defs>
@@ -239,13 +239,13 @@ const RegionView = ({ region, initialSubLocation, diceBadge, onBack }: RegionVie
                     cy={hs.y}
                     r={4.5}
                     fill="none"
-                    stroke={isDark ? "hsla(260, 40%, 20%, 0.35)" : "hsla(42, 52%, 70%, 0.25)"}
+                    stroke={isDark ? "hsla(35, 50%, 30%, 0.25)" : "hsla(42, 52%, 70%, 0.25)"}
                     strokeWidth={0.25}
                     style={{
                       animation: `hotspot-pulse 3s ease-in-out ${delay} infinite`,
                       transformOrigin: `${hs.x}px ${hs.y}px`,
                       transition: "all 300ms",
-                      ...(isHovered || isSelected ? { stroke: isDark ? "hsla(260, 40%, 20%, 0.7)" : "hsla(42, 52%, 70%, 0.6)", strokeWidth: 0.4 } : {}),
+                      ...(isHovered || isSelected ? { stroke: isDark ? "hsla(35, 50%, 35%, 0.6)" : "hsla(42, 52%, 70%, 0.6)", strokeWidth: 0.4 } : {}),
                     }}
                   />
                   {/* Main circle */}
@@ -254,11 +254,11 @@ const RegionView = ({ region, initialSubLocation, diceBadge, onBack }: RegionVie
                     cy={hs.y}
                     r={2.8}
                     fill={isHovered || isSelected
-                      ? (isDark ? "hsla(260, 40%, 15%, 0.5)" : "hsla(42, 52%, 70%, 0.35)")
-                      : (isDark ? "hsla(260, 40%, 15%, 0.25)" : "hsla(42, 52%, 70%, 0.12)")}
+                      ? (isDark ? "hsla(35, 50%, 28%, 0.3)" : "hsla(42, 52%, 70%, 0.35)")
+                      : (isDark ? "hsla(35, 50%, 25%, 0.08)" : "hsla(42, 52%, 70%, 0.12)")}
                     stroke={isHovered || isSelected
-                      ? (isDark ? "hsla(260, 30%, 12%, 1)" : "hsla(42, 52%, 80%, 1)")
-                      : (isDark ? "hsla(260, 35%, 18%, 0.8)" : "hsla(42, 52%, 70%, 0.7)")}
+                      ? (isDark ? "hsla(30, 55%, 35%, 0.9)" : "hsla(42, 52%, 80%, 1)")
+                      : (isDark ? "hsla(35, 50%, 30%, 0.6)" : "hsla(42, 52%, 70%, 0.7)")}
                     strokeWidth={isHovered || isSelected ? 0.6 : 0.4}
                     style={{
                       animation: `${isDark ? "hotspot-core-pulse-dark" : "hotspot-core-pulse-light"} 3s ease-in-out ${delay} infinite`,
