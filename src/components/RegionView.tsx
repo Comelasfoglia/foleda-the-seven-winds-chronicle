@@ -184,38 +184,85 @@ const RegionView = ({ region, initialSubLocation, diceBadge, onBack }: RegionVie
           {regionHotspots.map((hs, idx) => {
             const isHovered = hoveredHotspot === idx;
             const isSelected = selectedSubIdx === idx;
+            const subName = allSubLocations[idx]?.name || "";
             return (
-              <g key={hs.number}>
+              <g key={hs.number}
+                onMouseEnter={() => setHoveredHotspot(idx)}
+                onMouseLeave={() => setHoveredHotspot(null)}
+                onClick={() => handleHotspotClick(idx)}
+                className="cursor-pointer"
+              >
+                {/* Outer glow ring */}
+                <circle
+                  cx={hs.x}
+                  cy={hs.y}
+                  r={4.5}
+                  fill="none"
+                  stroke="hsla(42, 52%, 51%, 0.25)"
+                  strokeWidth={0.3}
+                  style={{
+                    transition: "all 300ms",
+                    opacity: isHovered || isSelected ? 1 : 0.5,
+                    transform: isHovered ? "scale(1.15)" : "scale(1)",
+                    transformOrigin: `${hs.x}px ${hs.y}px`,
+                  }}
+                />
+                {/* Main circle */}
                 <circle
                   cx={hs.x}
                   cy={hs.y}
                   r={3}
-                  fill={isHovered || isSelected ? "hsla(42, 52%, 51%, 0.15)" : "transparent"}
-                  stroke="hsla(42, 52%, 51%, 0.5)"
-                  strokeWidth={isHovered || isSelected ? 0.8 : 0.5}
-                  className="cursor-pointer"
+                  fill={isHovered || isSelected ? "hsla(42, 52%, 51%, 0.25)" : "hsla(42, 52%, 51%, 0.08)"}
+                  stroke="hsla(42, 52%, 51%, 0.8)"
+                  strokeWidth={isHovered || isSelected ? 0.6 : 0.4}
                   style={{
                     transition: "all 200ms",
-                    transform: isHovered ? `scale(1.2)` : "scale(1)",
+                    transform: isHovered ? "scale(1.15)" : "scale(1)",
                     transformOrigin: `${hs.x}px ${hs.y}px`,
-                    strokeOpacity: isHovered || isSelected ? 1 : 0.5,
+                    filter: isHovered || isSelected ? "drop-shadow(0 0 2px hsla(42, 52%, 51%, 0.6))" : "none",
                   }}
-                  onMouseEnter={() => setHoveredHotspot(idx)}
-                  onMouseLeave={() => setHoveredHotspot(null)}
-                  onClick={() => handleHotspotClick(idx)}
                 />
+                {/* Number */}
                 <text
                   x={hs.x}
                   y={hs.y + 1}
                   textAnchor="middle"
-                  fill="hsla(42, 52%, 78%, 0.9)"
-                  fontSize="2.5"
+                  fill={isHovered || isSelected ? "hsla(42, 52%, 85%, 1)" : "hsla(42, 52%, 78%, 0.9)"}
+                  fontSize="2.8"
                   fontFamily="inherit"
                   className="pointer-events-none select-none"
-                  style={{ fontWeight: 600 }}
+                  style={{ fontWeight: 700, transition: "fill 200ms" }}
                 >
                   {hs.number}
                 </text>
+                {/* Hover label */}
+                {isHovered && !isSelected && (
+                  <>
+                    <rect
+                      x={hs.x - (subName.length * 0.95 + 1) / 2}
+                      y={hs.y - 7.5}
+                      width={subName.length * 0.95 + 1}
+                      height={3.5}
+                      rx={0.8}
+                      fill="hsla(0, 0%, 5%, 0.9)"
+                      stroke="hsla(42, 52%, 51%, 0.3)"
+                      strokeWidth={0.2}
+                      className="pointer-events-none"
+                    />
+                    <text
+                      x={hs.x}
+                      y={hs.y - 5}
+                      textAnchor="middle"
+                      fill="hsla(42, 52%, 80%, 1)"
+                      fontSize="1.8"
+                      fontFamily="inherit"
+                      className="pointer-events-none select-none"
+                      style={{ fontWeight: 500 }}
+                    >
+                      {subName}
+                    </text>
+                  </>
+                )}
               </g>
             );
           })}
