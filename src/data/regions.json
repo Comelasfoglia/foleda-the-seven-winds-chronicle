@@ -73,19 +73,19 @@
   },
   {
     "id": "sud",
-    "name": "Il Vuoto",
+    "name": "La Calmapiatta",
     "direction": "Sud",
     "color": "#1A1A1A",
-    "spirit": "???",
-    "spiritQuote": "«…»",
-    "description": "Descrizione in arrivo…",
+    "spirit": "Calcavécia",
+    "spiritQuote": "Il silenzio del Sud è ingannevole. Quando il corpo dorme ma la mente veglia, Calcavécia emerge dalle ombre. Il suo peso sul petto è il prezzo che paghiamo per il silenzio diurno. Nei nostri incubi, il vento del Sud soffia più forte che mai.",
+    "description": "A Sud de **La Città** si estende qualcosa che ha un nome — **La Calmapiatta** — ma che tutti chiamano **Il Vuoto**. Non è solo un deserto: i deserti sono silenziosi, ma questo è qualcosa di più, un silenzio che preme contro le orecchie come un peso fisico, che assorbe le voci prima che arrivino a destinazione. La sabbia è nera. Il cielo sopra è dello stesso colore degli altri cieli, il che è probabilmente la cosa più inquietante di tutto. Nessuno che si sia avventurato oltre il confine è tornato per raccontarlo.\n\nQuello che si sa viene da osservazioni a distanza, da frammenti di diari, e da cose che la gente sogna — in tutta la Piana le persone sognano la stessa città di pietra nera, la stessa cosa che cammina tra le rovine. **Il Vuoto cresce.** Non velocemente — anno per anno si misura in metri — ma cresce con la continuità di qualcosa che non ha ragioni di fermarsi. **Calcavécia** si siede sul petto dei dormienti. Al mattino, a volte, c'è sabbia nera sul cuscino.",
     "subLocations": [
-      { "number": 1, "name": "La Soglia del Nulla", "description": "Descrizione in arrivo…" },
-      { "number": 2, "name": "Il Campo dei Sussurri", "description": "Descrizione in arrivo…" },
-      { "number": 3, "name": "La Pietra Nera", "description": "Descrizione in arrivo…" },
-      { "number": 4, "name": "Il Sentiero che Non Torna", "description": "Descrizione in arrivo…" },
-      { "number": 5, "name": "L'Occhio del Vuoto", "description": "Descrizione in arrivo…" },
-      { "number": 6, "name": "La Fine della Mappa", "description": "Descrizione in arrivo…" }
+      { "number": 1, "name": "La Frontiera", "description": "Dove la terra fertile inizia a inaridirsi: una distesa di **tronchi contorti e pietrificati**, inclinati tutti verso Nord come se cercassero di allontanarsi da qualcosa. Fino a pochi decenni fa era un bosco. Al bordo c'è un **Posto di Osservazione** abbandonato, con muri interni coperti di incisioni delle guardie — le prime ordinate, date e misurazioni, poi sempre più brevi, poi non più misurazioni. **Colui Che Misura** viene ogni settimana con i suoi strumenti. Nelle ultime settimane, tra le annotazioni, sono comparsi simboli che non ricorda di aver scritto." },
+      { "number": 2, "name": "Le Danze della Sabbia", "description": "Sabbia nera che assorbe la luce. Enormi colonne si sollevano e turbinano nell'aria senza causa apparente, silenziose, trenta metri di altezza, in pattern che chi le osserva a lungo comincia a pensare di riconoscere. Non producono suono. Talvolta assumono forme — teste, braccia, qualcosa che si piega. **Quella Che Porta I Fiori** viene fin qui ogni settimana. Li lascia al bordo, in un posto preciso. Sua figlia è entrata nella Calmapiatta sei anni fa. Non è tornata." },
+      { "number": 3, "name": "Le Rovine del Silenzio", "description": "Strutture di **pietra scura** parzialmente sepolte, torri spezzate, un portale d'ingresso — qualcosa che potrebbe essere stata una fortezza, un tempio, o qualcosa per cui non esiste una parola. L'architettura non corrisponde a nessuno stile conosciuto. Le iscrizioni sembrano cambiare quando non vengono guardate direttamente. Di notte **figure traslucide** emergono dalla pietra e ripetono sempre le stesse azioni. In un'area circolare dove la sabbia è più nera, le figure si inchinano verso qualcosa che non c'è più." },
+      { "number": 4, "name": "Il Campo degli Esploratori", "description": "I resti di decine di spedizioni in una depressione del terreno. Tende intatte, equipaggiamenti perfettamente conservati, diari con le pagine ancora bianche. Alcune attrezzature risalgono a più di un secolo e non mostrano deterioramento. Le ossa degli esploratori sono **annerite** come per calore intenso, senza altri segni di fuoco. Tutti nella stessa posizione: sdraiati sulla schiena, braccia allargate, bocca aperta. Le mappe disegnate dai diversi esploratori mostrano tutte una geografia diversa." },
+      { "number": 5, "name": "L'Abisso", "description": "Una voragine **perfettamente circolare**, almeno un chilometro di diametro. L'oscurità all'interno assorbe qualsiasi luce dopo pochi metri. Il bordo è regolare come tagliato, la pietra lungo il perimetro mostra segni di fusione. **Sette pilastri di ossidiana** intorno al perimetro, inclinati verso l'interno, freddi al tatto anche sotto il sole più intenso. La sabbia scorre verso il bordo e cade in un flusso continuo. Il livello nelle zone circostanti non diminuisce. Se si produce un suono, l'eco arriva prima del suono." },
+      { "number": 6, "name": "Il Monolito", "description": "Nell'estremo Sud, oltre l'Abisso, in una zona da cui nessuno è tornato — visto solo da lontano, con strumenti dalla Torre de La Città. Una struttura verticale di **pietra nera**, trenta metri, coperta di iscrizioni senza corrispondenza in nessuna lingua conosciuta. Sulla sommità, qualcosa che ricorda corna. In certe notti emette un **bagliore** di un colore che nessuno descrive con la stessa parola due volte. In quelle notti, in tutta la Piana, la gente sogna la stessa cosa." }
     ],
     "adventures": []
   },
