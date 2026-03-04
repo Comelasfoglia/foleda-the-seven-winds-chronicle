@@ -196,14 +196,14 @@ const RegionView = ({ region, initialSubLocation, diceBadge, onBack }: RegionVie
                 <circle
                   cx={hs.x}
                   cy={hs.y}
-                  r={4.5}
+                  r={5}
                   fill="none"
-                  stroke="hsla(42, 52%, 51%, 0.25)"
+                  stroke="hsla(0, 0%, 100%, 0.2)"
                   strokeWidth={0.3}
                   style={{
                     transition: "all 300ms",
-                    opacity: isHovered || isSelected ? 1 : 0.5,
-                    transform: isHovered ? "scale(1.15)" : "scale(1)",
+                    opacity: isHovered || isSelected ? 1 : 0.6,
+                    transform: isHovered ? "scale(1.2)" : "scale(1)",
                     transformOrigin: `${hs.x}px ${hs.y}px`,
                   }}
                 />
@@ -211,49 +211,36 @@ const RegionView = ({ region, initialSubLocation, diceBadge, onBack }: RegionVie
                 <circle
                   cx={hs.x}
                   cy={hs.y}
-                  r={3}
-                  fill={isHovered || isSelected ? "hsla(42, 52%, 51%, 0.25)" : "hsla(42, 52%, 51%, 0.08)"}
-                  stroke="hsla(42, 52%, 51%, 0.8)"
-                  strokeWidth={isHovered || isSelected ? 0.6 : 0.4}
+                  r={3.2}
+                  fill={isHovered || isSelected ? "hsla(0, 0%, 100%, 0.3)" : "hsla(0, 0%, 100%, 0.12)"}
+                  stroke={isHovered || isSelected ? "hsla(0, 0%, 100%, 1)" : "hsla(0, 0%, 100%, 0.7)"}
+                  strokeWidth={isHovered || isSelected ? 0.7 : 0.5}
                   style={{
                     transition: "all 200ms",
-                    transform: isHovered ? "scale(1.15)" : "scale(1)",
+                    transform: isHovered ? "scale(1.2)" : "scale(1)",
                     transformOrigin: `${hs.x}px ${hs.y}px`,
-                    filter: isHovered || isSelected ? "drop-shadow(0 0 2px hsla(42, 52%, 51%, 0.6))" : "none",
+                    filter: isHovered || isSelected ? "drop-shadow(0 0 3px hsla(0, 0%, 100%, 0.5))" : "drop-shadow(0 0 1.5px hsla(0, 0%, 0%, 0.6))",
                   }}
                 />
-                {/* Number */}
-                <text
-                  x={hs.x}
-                  y={hs.y + 1}
-                  textAnchor="middle"
-                  fill={isHovered || isSelected ? "hsla(42, 52%, 85%, 1)" : "hsla(42, 52%, 78%, 0.9)"}
-                  fontSize="2.8"
-                  fontFamily="inherit"
-                  className="pointer-events-none select-none"
-                  style={{ fontWeight: 700, transition: "fill 200ms" }}
-                >
-                  {hs.number}
-                </text>
                 {/* Hover label */}
                 {isHovered && !isSelected && (
                   <>
                     <rect
                       x={hs.x - (subName.length * 0.95 + 1) / 2}
-                      y={hs.y - 7.5}
+                      y={hs.y - 8}
                       width={subName.length * 0.95 + 1}
                       height={3.5}
                       rx={0.8}
-                      fill="hsla(0, 0%, 5%, 0.9)"
-                      stroke="hsla(42, 52%, 51%, 0.3)"
+                      fill="hsla(0, 0%, 5%, 0.92)"
+                      stroke="hsla(0, 0%, 100%, 0.3)"
                       strokeWidth={0.2}
                       className="pointer-events-none"
                     />
                     <text
                       x={hs.x}
-                      y={hs.y - 5}
+                      y={hs.y - 5.5}
                       textAnchor="middle"
-                      fill="hsla(42, 52%, 80%, 1)"
+                      fill="hsla(0, 0%, 95%, 1)"
                       fontSize="1.8"
                       fontFamily="inherit"
                       className="pointer-events-none select-none"
