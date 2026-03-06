@@ -1,6 +1,7 @@
 import { useState, useEffect, useCallback } from "react";
 import regionsData from "@/data/regions.json";
 import RegionView from "@/components/RegionView";
+import CityModal from "@/components/CityModal";
 import DiceRoller from "@/components/DiceRoller";
 import ComelasfogliaFooter from "@/components/ComelasfogliaFooter";
 import mappaFoleda from "@/assets/mappa-foleda.png";
@@ -184,12 +185,19 @@ const MapSection = ({ targetRegionId, onClearTarget }: MapSectionProps) => {
         ) : (
           /* Level 1: Region view with hotspots */
           region && (
-            <RegionView
-              region={region}
-              initialSubLocation={selectedSubLocation}
-              diceBadge={diceBadge}
-              onBack={transitionToMap}
-            />
+            region.id === "centro" && region.isCity ? (
+              <CityModal
+                region={region as any}
+                onBack={transitionToMap}
+              />
+            ) : (
+              <RegionView
+                region={region}
+                initialSubLocation={selectedSubLocation}
+                diceBadge={diceBadge}
+                onBack={transitionToMap}
+              />
+            )
           )
         )}
       </div>
