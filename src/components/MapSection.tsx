@@ -185,12 +185,19 @@ const MapSection = ({ targetRegionId, onClearTarget }: MapSectionProps) => {
         ) : (
           /* Level 1: Region view with hotspots */
           region && (
-            <RegionView
-              region={region}
-              initialSubLocation={selectedSubLocation}
-              diceBadge={diceBadge}
-              onBack={transitionToMap}
-            />
+            region.id === "centro" && region.isCity ? (
+              <CityModal
+                region={region as any}
+                onBack={transitionToMap}
+              />
+            ) : (
+              <RegionView
+                region={region}
+                initialSubLocation={selectedSubLocation}
+                diceBadge={diceBadge}
+                onBack={transitionToMap}
+              />
+            )
           )
         )}
       </div>
