@@ -13,6 +13,7 @@ const Index = () => {
   const [screen, setScreen] = useState<AppScreen>("soglia");
   const [fadeOut, setFadeOut] = useState(false);
   const [targetRegionId, setTargetRegionId] = useState<string | null>(null);
+  const [windIntensity, setWindIntensity] = useState(0);
 
   const transitionTo = useCallback((target: AppScreen) => {
     setFadeOut(true);
@@ -31,7 +32,7 @@ const Index = () => {
   return (
     <div className="min-h-screen bg-background texture-wood vignette relative overflow-hidden"
       style={{ background: 'linear-gradient(180deg, hsl(252, 40%, 14%) 0%, hsl(270, 30%, 18%) 100%)' }}>
-      <MagicParticles />
+      <MagicParticles intensity={windIntensity} />
       <div className={`relative z-10 transition-opacity duration-500 ${fadeOut ? 'opacity-0' : 'opacity-100'}`}>
         {screen === "soglia" && (
           <SogliaPage onEnter={() => transitionTo("porte")} />
@@ -52,7 +53,7 @@ const Index = () => {
                 <AdventuresSection onNavigate={navigateTo} />
               )}
               {screen === "scopri" && (
-                <AssessmentSection onNavigate={navigateTo} />
+                <AssessmentSection onNavigate={navigateTo} onWindChange={setWindIntensity} />
               )}
             </main>
           </>
