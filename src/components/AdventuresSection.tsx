@@ -2,6 +2,7 @@ import adventuresData from "@/data/adventures.json";
 import regionsData from "@/data/regions.json";
 import ComelasfogliaFooter from "@/components/ComelasfogliaFooter";
 import logoOmbre from "@/assets/logo-avventura-ombre.png";
+import logoTorbaviva from "@/assets/logo-avventura-torbaviva.png";
 
 type AppScreen = "soglia" | "porte" | "esplora" | "gioca" | "scopri";
 
@@ -44,6 +45,41 @@ const AdventuresSection = ({ onNavigate }: AdventuresSectionProps) => {
                 </div>
                 <p className="font-label text-sm text-muted-foreground mt-3">
                   Un'avventura in solitaria a Porto Ardente
+                </p>
+                <p className="font-body italic text-foreground/70 leading-relaxed mt-2 text-center">
+                  "{adventure.quote}"
+                </p>
+                <a
+                  href={adventure.url}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="font-label text-sm text-accent hover:text-accent/80 transition-colors mt-3"
+                >
+                  Gioca →
+                </a>
+              </div>
+            );
+          }
+
+          if (adventure.id === "torbaviva-resoconto") {
+            const adventureLogo: Record<string, string> = { "torbaviva-resoconto": logoTorbaviva };
+            return (
+              <div key={adventure.id} className="flex flex-col items-center">
+                <div className="relative w-full rounded-2xl overflow-hidden">
+                  <img
+                    src={adventureLogo[adventure.id]}
+                    alt={adventure.title}
+                    className="w-full object-cover"
+                  />
+                  <div
+                    className="absolute inset-0 pointer-events-none rounded-2xl"
+                    style={{
+                      boxShadow: 'inset 0 0 60px 20px rgba(0,0,0,0.7)',
+                    }}
+                  />
+                </div>
+                <p className="font-label text-sm text-muted-foreground mt-3">
+                  Un'avventura in solitaria nella Palude di Torbaviva
                 </p>
                 <p className="font-body italic text-foreground/70 leading-relaxed mt-2 text-center">
                   "{adventure.quote}"
