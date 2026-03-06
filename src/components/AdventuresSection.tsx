@@ -2,6 +2,7 @@ import adventuresData from "@/data/adventures.json";
 import regionsData from "@/data/regions.json";
 import ComelasfogliaFooter from "@/components/ComelasfogliaFooter";
 import logoOmbre from "@/assets/logo-avventura-ombre.png";
+import logoTorbaviva from "@/assets/logo-avventura-torbaviva.png";
 
 type AppScreen = "soglia" | "porte" | "esplora" | "gioca" | "scopri";
 
