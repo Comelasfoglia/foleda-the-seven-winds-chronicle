@@ -220,18 +220,18 @@
         "governor": "Il Maestro dei Mercanti",
         "description": "Porta verso Porto Ardente e Le Gole. L'aria sa di spezie, cuoio e ambizione. Qui tutto ha un prezzo — anche le cose che non dovrebbero averlo.",
         "subLocations": [
-          { "number": 1, "name": "Il Grande Bazar", "description": "Mercato coperto grande quanto una piazza intera, centinaia di bancarelle. Al centro esatto, una bancarella che vende oggetti che non esistono ancora; nessuno l'ha trovata due volte di seguito." },
-          { "number": 2, "name": "La Piazza delle Bilance", "description": "Tutte le merci vengono pesate ufficialmente sotto lo sguardo di tre funzionari che non sorridono mai. Le bilance di bronzo pesano anche le intenzioni di chi posa la merce." },
-          { "number": 3, "name": "I Magazzini del Sale", "description": "Depositi freschi e asciutti dove i guardiani chiudono un occhio su chi dorme tra i sacchi, purché non dia problemi." },
-          { "number": 4, "name": "La Locanda del Vento Stanco", "description": "Mamma Vento ricorda il volto di ogni persona che ha dormito sotto il suo tetto. Qualcuno dice un registro segreto, altri che non dimentichi mai nulla." },
-          { "number": 5, "name": "Il Vicolo delle Spezie", "description": "Ogni bottega ha un odore diverso e più intenso della precedente. Se si conosce la persona giusta, anche sostanze che non hanno nome nei cataloghi ufficiali." },
-          { "number": 6, "name": "La Casa dei Cambi", "description": "Cambiavalute dietro grate di ferro, in stanze fresche e buie. Sorridono sempre quando parlano di denaro; non è mai rassicurante." },
-          { "number": 7, "name": "Il Fondaco dei Forestieri", "description": "I guardiani sono pagati per non essere curiosi. Cosa ci sia dentro è un mistero che cambia ogni settimana." },
-          { "number": 8, "name": "La Taverna del Contratto", "description": "Accordi che non vengono messi per iscritto ma che sono più vincolanti di qualsiasi documento. Chi rompe un patto non farà mai più affari nel quartiere." },
-          { "number": 9, "name": "Il Mercato Notturno", "description": "Apre quando il Grande Bazar chiude, lanterne rosse, clienti che preferiscono non farsi vedere. I prezzi sono più alti, le domande meno." },
-          { "number": 10, "name": "Le Botteghe dei Vetrai", "description": "Fiale per profumi e per veleni, specchi che riflettono più di quello che dovrebbero. Il vetro qui è un'arte, e come tutte le arti ha i suoi segreti." },
-          { "number": 11, "name": "La Loggia del Maestro", "description": "Corridoi sempre in ombra. Il Maestro riceve solo su appuntamento, e ottenere un appuntamento richiede una borsa abbastanza pesante." },
-          { "number": 12, "name": "Il Ponte delle Carovane", "description": "Abbastanza largo per tre carri affiancati. Passare il Ponte significa entrare nel cuore commerciale della Piana, con tutto quello che comporta." }
+          { "number": 1, "name": "Il Grande Bazar", "description": "Un mercato coperto grande quanto una piazza intera, centinaia di bancarelle. C'è chi dice che al centro esatto ci sia una bancarella che vende oggetti che non esistono ancora, ma nessuno è mai riuscito a trovarla due volte di seguito." },
+          { "number": 2, "name": "La Piazza delle Bilance", "description": "Tutte le merci vengono pesate sotto lo sguardo di tre funzionari che non sorridono mai e non accettano mance. Le bilance di bronzo pesano anche le intenzioni di chi posa la merce." },
+          { "number": 3, "name": "I Magazzini del Sale", "description": "Depositi freschi e asciutti. I guardiani chiudono un occhio su chi dorme tra i sacchi, purché non dia problemi." },
+          { "number": 4, "name": "La Locanda del Vento Stanco", "description": "Un letto, un pasto caldo, una compagnia che non fa troppe domande. Mamma Vento ricorda il volto di ogni persona che ha dormito sotto il suo tetto; qualcuno dice un registro segreto, altri che non dimentichi mai nulla." },
+          { "number": 5, "name": "Il Vicolo delle Spezie", "description": "Ogni bottega ha un odore diverso e più intenso della precedente. Zafferano delle Gole, pepe di Porto Ardente, cannella delle terre oltre il Vuoto — ammesso che esistano. E se si conosce la persona giusta, anche sostanze senza nome." },
+          { "number": 6, "name": "La Casa dei Cambi", "description": "I cambiavalute siedono dietro grate di ferro in stanze fresche e buie, decidono il tasso ogni mattina, e sorridono sempre quando parlano di denaro. Non è mai un sorriso rassicurante." },
+          { "number": 7, "name": "Il Fondaco dei Forestieri", "description": "Magazzino dove i mercanti depositano le merci pagando un affitto settimanale. Cosa ci sia dentro è un mistero che cambia ogni settimana, e i guardiani sono pagati per non essere curiosi." },
+          { "number": 8, "name": "La Taverna del Contratto", "description": "Accordi che non vengono messi per iscritto ma sono più vincolanti di qualsiasi documento. Chi rompe un patto stretto qui non farà mai più affari nel quartiere." },
+          { "number": 9, "name": "Il Mercato Notturno", "description": "Apre quando il Grande Bazar chiude, illuminato da lanterne rosse, frequentato da clienti che preferiscono non farsi vedere. I prezzi sono più alti, le domande meno, e la merce… beh, la merce è diversa." },
+          { "number": 10, "name": "Le Botteghe dei Vetrai", "description": "Fiale per profumi e per veleni, ampolle per unguenti e pozioni, specchi che riflettono più di quello che dovrebbero. Il vetro qui è un'arte, e come tutte le arti ha i suoi segreti." },
+          { "number": 11, "name": "La Loggia del Maestro", "description": "Palazzo di marmo bianco, colonne altissime, corridoi in ombra. Il Maestro riceve solo su appuntamento, e ottenere un appuntamento richiede tempo, pazienza e una borsa pesante." },
+          { "number": 12, "name": "Il Ponte delle Carovane", "description": "Largo abbastanza per tre carri affiancati, lungo abbastanza per una piccola folla di venditori, mendicanti e guardie. Passare il Ponte significa entrare nel cuore commerciale della Piana, con tutto quello che comporta." }
         ]
       },
       {
@@ -241,18 +241,18 @@
         "governor": "Il Rettore",
         "description": "Porta verso Gelobrina e la Regione Elfica. Torri di osservazione, cortili pieni di discussioni, e il silenzio assoluto della Grande Biblioteca.",
         "subLocations": [
-          { "number": 1, "name": "La Grande Biblioteca", "description": "Non la biblioteca delle storie (quella è negli Archivi), ma dei fatti: mappe, trattati, calcoli astronomici. Scaffali fino al soffitto, silenzio così assoluto che si sentono le pagine girate tre sale più in là." },
-          { "number": 2, "name": "Il Laboratorio dei Venti", "description": "Tubi di vetro, strumenti di misurazione, ricercatori ossessionati. Alcuni strumenti sono così antichi che nessuno ricorda chi li abbia costruiti." },
-          { "number": 3, "name": "L'Osservatorio", "description": "Gli astronomi passano le notti a prendere appunti e le giornate a discutere di \"correlazioni\" senza mai spiegare correlazioni con cosa." },
-          { "number": 4, "name": "Le Aule del Rettore", "description": "Banchi consumati da generazioni, lavagne coperte di simboli che solo metà degli insegnanti capisce. I futuri studiosi si formano qui, ammesso che sopravvivano alla noia." },
-          { "number": 5, "name": "Il Giardino dei Campioni", "description": "Piante da ogni regione, alcune che non dovrebbero crescere nel clima della Città. Crescono lo stesso. I giardinieri hanno smesso di farsi domande." },
-          { "number": 6, "name": "La Sala delle Macchine", "description": "Prototipi, invenzioni a metà, ingranaggi che girano senza motivo. Ogni tanto qualcosa funziona come dovrebbe, senza che nessuno sappia perché." },
-          { "number": 7, "name": "L'Archivio dei Brevetti", "description": "Le dispute su chi abbia inventato per primo possono durare generazioni. Gli avvocati di brevetti sono i professionisti più ricchi del quartiere." },
-          { "number": 8, "name": "La Casa degli Studenti", "description": "Stanze piccole, mense affollate, discussioni fino all'alba. Tutti ricordano quel periodo come il migliore e il peggiore della vita, nello stesso momento." },
-          { "number": 9, "name": "Il Gabinetto delle Curiosità", "description": "Un dente di animale mai visto, una pietra troppo pesante, una scatola che non si apre. Alcuni oggetti si muovono quando nessuno li guarda." },
-          { "number": 10, "name": "La Stamperia", "description": "Odore di inchiostro che si attacca ai vestiti. I tipografi lo considerano un segno di distinzione." },
-          { "number": 11, "name": "Il Cortile dei Dibattiti", "description": "Gradinate dove gli studiosi discutono le teorie. I dibattiti dovrebbero essere civilizzati; spesso degenerano in lanci di oggetti. Il pubblico apprezza." },
-          { "number": 12, "name": "La Residenza del Rettore", "description": "Torre che non arriva mai abbastanza in alto. Ogni Rettore lamenta che dovrebbe essere più alta. Il successivo farà lo stesso." }
+          { "number": 1, "name": "La Grande Biblioteca", "description": "La biblioteca dei fatti: mappe, trattati, calcoli astronomici, registri che risalgono a secoli fa. Scaffali fino al soffitto, silenzio così assoluto che si sentono le pagine girate tre sale più in là." },
+          { "number": 2, "name": "Il Laboratorio dei Venti", "description": "Tubi di vetro, strumenti di misurazione, ricercatori ossessionati. Misurano pressioni, catalogano sussurri, tracciano flussi invisibili. Alcuni strumenti sono così antichi che nessuno ricorda chi li abbia costruiti." },
+          { "number": 3, "name": "L'Osservatorio", "description": "Il tetto si apre per guardare il cielo notturno. Gli astronomi passano le notti a prendere appunti e le giornate a discutere di \"correlazioni\" senza mai spiegare correlazioni con cosa, esattamente." },
+          { "number": 4, "name": "Le Aule del Rettore", "description": "Banchi consumati da generazioni di studenti, lavagne coperte di simboli che solo metà degli insegnanti capisce. Qui si formano i futuri studiosi della Piana, ammesso che sopravvivano alla noia delle lezioni introduttive." },
+          { "number": 5, "name": "Il Giardino dei Campioni", "description": "Piante portate da ogni regione, ognuna con targhetta. Alcune non dovrebbero crescere nel clima della Città; crescono lo stesso, e i giardinieri hanno smesso di farsi domande." },
+          { "number": 6, "name": "La Sala delle Macchine", "description": "Prototipi, invenzioni a metà, esperimenti falliti, meccanismi il cui scopo originale è andato perduto. Ingranaggi che girano senza motivo, e ogni tanto qualcosa che funziona come dovrebbe, senza che nessuno sappia perché." },
+          { "number": 7, "name": "L'Archivio dei Brevetti", "description": "Chi ha inventato cosa, quando e come. Le dispute possono durare generazioni, e gli avvocati di brevetti sono tra i professionisti più ricchi del quartiere." },
+          { "number": 8, "name": "La Casa degli Studenti", "description": "Stanze piccole, mense affollate, discussioni fino all'alba. Tutti quelli che hanno studiato qui ricordano quel periodo come il migliore e il peggiore della loro vita, spesso nello stesso momento." },
+          { "number": 9, "name": "Il Gabinetto delle Curiosità", "description": "Un dente di un animale mai visto, una pietra troppo pesante, una scatola che non si apre. Alcuni visitatori giurano che certi oggetti si muovono quando nessuno li guarda." },
+          { "number": 10, "name": "La Stamperia", "description": "Dove si stampa tutto il materiale scritto del quartiere. L'odore di inchiostro si attacca ai vestiti e non va più via; i tipografi lo considerano un segno di distinzione." },
+          { "number": 11, "name": "Il Cortile dei Dibattiti", "description": "Gradinate dove gli studiosi discutono teorie. I dibattiti dovrebbero essere civilizzati; spesso degenerano in lanci di oggetti. Il pubblico apprezza particolarmente questi ultimi." },
+          { "number": 12, "name": "La Residenza del Rettore", "description": "Una torre che si innalza sopra tutti gli edifici accademici ma non arriva mai abbastanza in alto. Ogni Rettore lamenta che dovrebbe essere più alta; il successivo farà lo stesso." }
         ]
       },
       {
@@ -262,18 +262,18 @@
         "governor": "L'Archivista Maggiore",
         "description": "Porta verso La Calmapiatta e il Deserto di Verderame. Qui si conservano tutte le storie della Piana — quelle approvate e quelle che qualcuno preferirebbe dimenticare.",
         "subLocations": [
-          { "number": 1, "name": "L'Archivio Centrale", "description": "Trovare un documento richiede di compilare il modulo giusto, che si può ottenere solo compilando un altro modulo. C'è chi dice che serva il modulo A38 per ottenere il modulo A38." },
-          { "number": 2, "name": "Il Teatro Grande", "description": "Drammi storici, commedie morali, tragedie edificanti. Sempre impeccabili, sempre appropriati, e sempre stranamente dimenticabili." },
-          { "number": 3, "name": "Il Teatro delle Ombre", "description": "Un vicolo senza nome, una porta senza insegna. Qui si raccontano le altre storie, quelle senza nessuna approvazione: marionette alla luce delle candele, monologhi sussurrati." },
-          { "number": 4, "name": "La Biblioteca delle Storie", "description": "Fiabe, leggende, canzoni trascritte. Scaffali organizzati per emozione piuttosto che per autore. Trovare quello che si cerca significa prima sapere cosa si vuole provare." },
-          { "number": 5, "name": "Il Caffè dei Poeti", "description": "Candele su ogni tavolo, vino in ogni bicchiere. C'è chi giura che le candele abbiano orecchie e che tutto venga trascritto da qualche parte." },
-          { "number": 6, "name": "La Sala dei Contratti", "description": "Copie di ogni accordo mai firmato. Alcuni stranamente non risultano, altri firmati da persone che nessuno ha sentito, altri con clausole che nessuno ricorda." },
-          { "number": 7, "name": "Gli Scaffali Sigillati", "description": "Catene pesanti e sigilli di cera rossa. Chi ha messo i sigilli e perché è una domanda a cui nessuno sa rispondere. I sigilli più vecchi hanno ceralacca di un colore che nessuno produce più." },
-          { "number": 8, "name": "La Scuola dei Cantastorie", "description": "Dove si impara l'arte di raccontare storie. Ma soprattutto, dicono i maligni, dove si impara quali storie non raccontare mai." },
-          { "number": 9, "name": "Il Deposito delle Storie Perdute", "description": "Narrazioni senza autore, senza data, senza origine. Alcune bellissime, altre inquietanti, nessuna con qualcuno che possa reclamarle." },
-          { "number": 10, "name": "La Locanda della Buona Novella", "description": "I viaggiatori pagano il conto raccontando una storia mai sentita. C'è chi sospetta che l'oste lavori per gli Archivi." },
-          { "number": 11, "name": "L'Ufficio delle Cancellazioni", "description": "Impiegati dall'aspetto anonimo che \"correggono errori.\" Chi ha visto i timbri rossi tende a parlare sottovoce." },
-          { "number": 12, "name": "La Residenza dell'Archivista", "description": "Pile di documenti ovunque, corridoi dove bisogna camminare di lato. L'Archivista Maggiore è sempre da qualche parte qui dentro; trovarlo è un'altra questione." }
+          { "number": 1, "name": "L'Archivio Centrale", "description": "Trovare un documento richiede di compilare il modulo giusto, che si ottiene compilando un altro modulo. C'è chi dice che serva il modulo A38 per ottenere il modulo A38, e che nessuno sia mai uscito con quello che cercava." },
+          { "number": 2, "name": "Il Teatro Grande", "description": "Drammi storici, commedie morali, tragedie edificanti. Gli spettacoli sono impeccabili, appropriati, e stranamente dimenticabili." },
+          { "number": 3, "name": "Il Teatro delle Ombre", "description": "Un vicolo senza nome, una porta senza insegna. Qui si raccontano le altre storie — spettacoli di marionette alla luce delle candele, monologhi sussurrati, drammi che nessuno dovrebbe vedere." },
+          { "number": 4, "name": "La Biblioteca delle Storie", "description": "Non dei fatti, ma delle narrazioni: fiabe, leggende, canzoni trascritte. Scaffali organizzati per emozione piuttosto che per autore. Trovare quello che si cerca significa prima sapere cosa si vuole provare." },
+          { "number": 5, "name": "Il Caffè dei Poeti", "description": "Candele su ogni tavolo, vino in ogni bicchiere, parole ovunque. I poeti vengono qui a morire un po' e a rinascere un po', ogni sera. C'è chi giura che le candele abbiano orecchie." },
+          { "number": 6, "name": "La Sala dei Contratti", "description": "Copie di ogni accordo mai firmato nella Piana. Alcuni stranamente non risultano, altri firmati da persone mai sentite, altri con clausole che nessuno ricorda di aver negoziato." },
+          { "number": 7, "name": "Gli Scaffali Sigillati", "description": "Catene pesanti e sigilli di cera rossa. Documenti inaccessibili senza un'autorizzazione che nessuno concede. Chi ha messo i sigilli e perché è una domanda senza risposta. I sigilli più vecchi hanno ceralacca di un colore che nessuno produce più." },
+          { "number": 8, "name": "La Scuola dei Cantastorie", "description": "Dove si impara l'arte di raccontare: la voce, le mani, le pause. Ma soprattutto, dicono i maligni, dove si impara quali storie non raccontare mai, in nessuna circostanza, per nessun motivo." },
+          { "number": 9, "name": "Il Deposito delle Storie Perdute", "description": "Narrazioni senza autore, senza data, senza origine: manoscritti da soffitte, pergamene da naufragi, testi da lapidi illeggibili. Alcune bellissime, altre inquietanti, nessuna con qualcuno che possa reclamarle." },
+          { "number": 10, "name": "La Locanda della Buona Novella", "description": "I viaggiatori pagano il conto raccontando una storia mai sentita; le storie buone valgono anche un letto. C'è chi sospetta che l'oste lavori per gli Archivi e che tutto venga trascritto da qualche parte." },
+          { "number": 11, "name": "L'Ufficio delle Cancellazioni", "description": "Impiegati dall'aspetto anonimo che \"correggono errori\" nei documenti. Cosa significhi esattamente nessuno lo sa, ma chi ha visto i timbri rossi tende a parlare sottovoce." },
+          { "number": 12, "name": "La Residenza dell'Archivista", "description": "Meno imponente delle altre residenze ma molto più piena di carta: pile ovunque, corridoi dove bisogna camminare di lato. L'Archivista Maggiore è sempre da qualche parte qui dentro; trovarlo è un'altra questione." }
         ]
       },
       {
@@ -283,18 +283,18 @@
         "governor": "Il Podestà (nominale) / Le Assemblee (reale)",
         "description": "Porta verso Ventascolta e Torbaviva. Il quartiere popolare: chi non ha trovato posto altrove, chi è arrivato con poco, chi ha deciso che la dignità vale più del prestigio.",
         "subLocations": [
-          { "number": 1, "name": "Il Ponte Vecchio", "description": "L'unico ponte accessibile a tutti senza pedaggi. Stretto abbastanza da camminare in fila indiana, lungo abbastanza per venditori ambulanti e musicisti di strada. Attraversarlo significa passare da un mondo a un altro." },
-          { "number": 2, "name": "La Piazza delle Assemblee", "description": "Gradinate di pietra consumata. Chi vuole parlare alza la voce, chi vuole votare alza la mano. Chi non è d'accordo può tornare la settimana prossima." },
-          { "number": 3, "name": "La Casa del Popolo", "description": "Mensa, rifugio, punto d'incontro. Le porte non chiudono mai. Nessuno chiede da dove vieni." },
+          { "number": 1, "name": "Il Ponte Vecchio", "description": "L'unico ponte accessibile a tutti senza pedaggi. Stretto, lungo, pieno di venditori ambulanti e musicisti. Attraversarlo significa passare da un mondo a un altro, e non tutti se ne rendono conto." },
+          { "number": 2, "name": "La Piazza delle Assemblee", "description": "Gradinate di pietra consumata. Chi vuole parlare alza la voce, chi vuole votare alza la mano. Non ci sono moderatori. Chi non è d'accordo può tornare la settimana prossima." },
+          { "number": 3, "name": "La Casa del Popolo", "description": "Mensa, rifugio, punto d'incontro. Le porte non chiudono mai, il cibo è semplice ma abbondante, e nessuno chiede da dove vieni o cosa hai fatto prima." },
           { "number": 4, "name": "Il Lavatoio Grande", "description": "Dove le donne lavano i panni e si scambiano notizie. Il sistema di comunicazione più efficiente della Città; nessuno degli altri quartieri lo sospetta." },
           { "number": 5, "name": "La Via dei Forni", "description": "Pane prima dell'alba, profumo che sveglia il quartiere meglio di qualsiasi campana. Chi è nato qui dice che è l'odore di casa." },
           { "number": 6, "name": "L'Osteria del Torrente", "description": "Vino aspro, canzoni vecchie, gente che piange e ride nello stesso momento. L'oste non giudica e non manda via nessuno finché non diventa un problema." },
           { "number": 7, "name": "Il Dormitorio dei Nuovi", "description": "Letti a castello, privacy inesistente, rumore costante. La solidarietà tra chi condivide la stessa situazione è una delle cose che rende l'Oltre quello che è." },
-          { "number": 8, "name": "Le Botteghe dei Rattoppi", "description": "Niente si butta; tutto si ripara, tutto si riusa, tutto merita una seconda possibilità." },
-          { "number": 9, "name": "Il Cortile dei Bambini", "description": "Terra battuta, grida, corse, litigi, pace. Crescere imparando cosa significa appartenere a una comunità." },
-          { "number": 10, "name": "La Casa delle Barricate", "description": "Pietre dalle strade, bandiere strappate, ritratti di eroi che nessuno degli altri quartieri ricorda. Un promemoria di quello che sono stati capaci di fare." },
-          { "number": 11, "name": "La Residenza del Podestà", "description": "Quasi sempre vuota. La porta è aperta perché tanto non entra nessuno. Le ragnatele raccontano quanto spesso qualcuno passa a pulire." },
-          { "number": 12, "name": "La Riva del Torrente", "description": "Pescatori che non pescano, contrabbandieri, innamorati. L'acqua è ancora visibile; pochi metri più a sud sparisce sottoterra, e nessuno sa dove va." }
+          { "number": 8, "name": "Le Botteghe dei Rattoppi", "description": "Niente si butta nell'Oltre. Tutto si ripara, tutto si riusa, tutto merita una seconda possibilità." },
+          { "number": 9, "name": "Il Cortile dei Bambini", "description": "Terra battuta dove si grida, si corre, si litiga, si fa pace. Crescere imparando cosa significa appartenere a una comunità che si prende cura dei propri membri." },
+          { "number": 10, "name": "La Casa delle Barricate", "description": "Pietre raccolte dalle strade, bandiere strappate, ritratti di eroi che nessuno degli altri quartieri ricorda. Per la gente dell'Oltre è sacro — un promemoria di quello che sono stati capaci di fare." },
+          { "number": 11, "name": "La Residenza del Podestà", "description": "Quasi sempre vuota. La porta è aperta perché tanto non entra nessuno. Le ragnatele negli angoli raccontano quanto spesso qualcuno passa a pulire." },
+          { "number": 12, "name": "La Riva del Torrente", "description": "Pescatori che non pescano, contrabbandieri, innamorati. L'acqua è ancora visibile; pochi metri più a sud sparisce sottoterra, e nessuno sa dove va a finire." }
         ]
       }
     ],
