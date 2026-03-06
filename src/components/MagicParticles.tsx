@@ -67,7 +67,7 @@ const MagicParticles = ({ intensity = 0 }: MagicParticlesProps) => {
       // Smooth interpolation toward target
       const target = targetIntensityRef.current;
       const current = intensityRef.current;
-      intensityRef.current += (target - current) * 0.02;
+      intensityRef.current += (target - current) * 0.05;
       const t = intensityRef.current;
 
       // Adjust particle count
