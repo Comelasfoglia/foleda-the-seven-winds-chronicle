@@ -61,6 +61,41 @@ const AdventuresSection = ({ onNavigate }: AdventuresSectionProps) => {
             );
           }
 
+          if (adventure.id === "torbaviva-resoconto") {
+            const adventureLogo: Record<string, string> = { "torbaviva-resoconto": logoTorbaviva };
+            return (
+              <div key={adventure.id} className="flex flex-col items-center">
+                <div className="relative w-full rounded-2xl overflow-hidden">
+                  <img
+                    src={adventureLogo[adventure.id]}
+                    alt={adventure.title}
+                    className="w-full object-cover"
+                  />
+                  <div
+                    className="absolute inset-0 pointer-events-none rounded-2xl"
+                    style={{
+                      boxShadow: 'inset 0 0 60px 20px rgba(0,0,0,0.7)',
+                    }}
+                  />
+                </div>
+                <p className="font-label text-sm text-muted-foreground mt-3">
+                  Un'avventura in solitaria nella Palude di Torbaviva
+                </p>
+                <p className="font-body italic text-foreground/70 leading-relaxed mt-2 text-center">
+                  "{adventure.quote}"
+                </p>
+                <a
+                  href={adventure.url}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="font-label text-sm text-accent hover:text-accent/80 transition-colors mt-3"
+                >
+                  Gioca →
+                </a>
+              </div>
+            );
+          }
+
           return (
             <div
               key={adventure.id}
