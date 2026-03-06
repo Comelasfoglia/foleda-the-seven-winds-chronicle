@@ -1,4 +1,5 @@
 import { Home } from "lucide-react";
+import WhatIsFoleda from "@/components/WhatIsFoleda";
 
 type AppScreen = "soglia" | "porte" | "esplora" | "gioca" | "scopri";
 
@@ -46,6 +47,7 @@ const NavBar = ({ current, onNavigate }: NavBarProps) => {
             {item.label}
           </button>
         ))}
+        <WhatIsFoleda />
       </nav>
 
       {/* Mobile tab bar */}
@@ -64,6 +66,7 @@ const NavBar = ({ current, onNavigate }: NavBarProps) => {
             {item.label}
           </button>
         ))}
+        <WhatIsFoleda />
       </nav>
     </>
   );
