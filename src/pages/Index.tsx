@@ -16,6 +16,7 @@ const Index = () => {
   const [windIntensity, setWindIntensity] = useState(0);
 
   const transitionTo = useCallback((target: AppScreen) => {
+    if (target !== "scopri") setWindIntensity(0);
     setFadeOut(true);
     setTimeout(() => {
       setScreen(target);
