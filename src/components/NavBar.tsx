@@ -31,7 +31,7 @@ const NavBar = ({ current, onNavigate }: NavBarProps) => {
           onClick={() => onNavigate("porte")}
           className="font-label text-sm text-muted-foreground hover:text-foreground transition-colors"
         >
-          ← Le Tre Porte
+          ← La Piana dei Sette Venti
         </button>
         <div className="flex-1" />
         {navItems.map((item) => (

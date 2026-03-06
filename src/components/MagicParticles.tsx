@@ -16,7 +16,7 @@ interface MagicParticlesProps {
 }
 
 const BASE_COUNT = 60;
-const MAX_COUNT = 120;
+const MAX_COUNT = 200;
 
 function createParticle(w: number, h: number): Particle {
   return {
@@ -79,10 +79,10 @@ const MagicParticles = ({ intensity = 0 }: MagicParticlesProps) => {
         particles.pop();
       }
 
-      const maxOpacity = 0.6 + t * 0.25;
-      const sizeMultiplier = 1 + t * 0.5;
-      const windBias = t * 1.5;
-      const turbulence = t * 0.8;
+      const maxOpacity = 0.6 + t * 0.3;
+      const sizeMultiplier = 1 + t * 1.0;
+      const windBias = t * 3.5;
+      const turbulence = t * 1.5;
 
       ctx.clearRect(0, 0, canvas.width, canvas.height);
       for (const p of particles) {
