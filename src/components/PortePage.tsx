@@ -12,19 +12,19 @@ const doors = [
     id: "esplora" as AppScreen,
     glyph: "✦",
     title: "Esplora la Piana",
-    subtitle: "Otto regioni, sette venti, e qualcosa al centro che nessuno ha mai visto.",
+    subtitle: "Otto regioni, sette venti, e una Torre al centro che non ha porte. Ogni luogo ha una storia. I dadi decidono quale.",
   },
   {
     id: "gioca" as AppScreen,
     glyph: "⚄",
     title: "Gioca un'avventura",
-    subtitle: "Due storie ti aspettano. Il personaggio è già lì — devi solo decidere quale porta aprire.",
+    subtitle: "Storie da vivere al tavolo con i tuoi amici. Il personaggio è già lì — devi solo decidere quale porta aprire.",
   },
   {
     id: "scopri" as AppScreen,
     glyph: "❋",
     title: "Scopri chi sei",
-    subtitle: "Rispondi alle domande. La Piana deciderà dove appartieni.",
+    subtitle: "Sedici domande. Otto personaggi. La Piana deciderà quale vento soffia per te.",
   },
 ];
 
@@ -43,12 +43,9 @@ const PortePage = ({ onNavigate }: PortePageProps) => {
         <WhatIsFoleda />
       </div>
 
-      <h2 className="font-display text-3xl md:text-4xl font-semibold text-foreground mb-4 text-center">
-        Le Tre Porte
+      <h2 className="font-display text-3xl md:text-4xl font-semibold text-foreground mb-12 text-center">
+        La Piana dei Sette Venti
       </h2>
-      <p className="font-body text-lg text-muted-foreground italic mb-12 text-center max-w-lg">
-        Scegli dove vuoi andare.
-      </p>
 
       <div className="flex flex-col md:flex-row gap-6 md:gap-8 w-full max-w-4xl">
         {doors.map((door) => (
