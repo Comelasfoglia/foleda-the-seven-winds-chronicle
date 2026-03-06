@@ -11,6 +11,7 @@ type AppScreen = "soglia" | "porte" | "esplora" | "gioca" | "scopri";
 
 interface AssessmentSectionProps {
   onNavigate: (target: AppScreen, regionId?: string) => void;
+  onWindChange?: (intensity: number) => void;
 }
 
 type Phase = "intro" | "questions" | "reveal" | "result";
@@ -46,7 +47,7 @@ function buildShuffledQuestions(): ShuffledQuestion[] {
   });
 }
 
-const AssessmentSection = ({ onNavigate }: AssessmentSectionProps) => {
+const AssessmentSection = ({ onNavigate, onWindChange }: AssessmentSectionProps) => {
   const [phase, setPhase] = useState<Phase>("intro");
   const [currentQ, setCurrentQ] = useState(0);
   const [answers, setAnswers] = useState<number[]>([]);
@@ -56,6 +57,18 @@ const AssessmentSection = ({ onNavigate }: AssessmentSectionProps) => {
 
   const totalQuestions = shuffledQuestions.length;
   const question = shuffledQuestions[currentQ];
+
+  // Wind intensity effect
+  useEffect(() => {
+    if (!onWindChange) return;
+    if (phase === "intro" || phase === "result") {
+      onWindChange(0);
+    } else if (phase === "reveal") {
+      onWindChange(1);
+    } else if (phase === "questions") {
+      onWindChange((currentQ + 1) / totalQuestions);
+    }
+  }, [phase, currentQ, totalQuestions, onWindChange]);
 
   const handleStart = useCallback(() => {
     setShuffledQuestions(buildShuffledQuestions());
