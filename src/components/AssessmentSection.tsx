@@ -58,6 +58,18 @@ const AssessmentSection = ({ onNavigate, onWindChange }: AssessmentSectionProps)
   const totalQuestions = shuffledQuestions.length;
   const question = shuffledQuestions[currentQ];
 
+  // Wind intensity effect
+  useEffect(() => {
+    if (!onWindChange) return;
+    if (phase === "intro" || phase === "result") {
+      onWindChange(0);
+    } else if (phase === "reveal") {
+      onWindChange(1);
+    } else if (phase === "questions") {
+      onWindChange((currentQ + 1) / totalQuestions);
+    }
+  }, [phase, currentQ, totalQuestions, onWindChange]);
+
   const handleStart = useCallback(() => {
     setShuffledQuestions(buildShuffledQuestions());
     setPhase("questions");
