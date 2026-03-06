@@ -1,14 +1,14 @@
 [
   {
     "id": "ombra-nessuno",
-    "title": "Ombra, Nessuno, Centomila Ombre",
+    "title": "Uno, nessuno, centomila ombre",
     "type": "Avventura in solitaria",
     "character": "Lìsca",
     "characterId": "lisca",
     "regionId": "sudest",
     "regionName": "Porto Ardente",
     "quote": "A Porto Ardente le ombre hanno più di un padrone. Lìsca lo sa. Forse è per questo che non dorme mai con le spalle alla porta.",
-    "url": "#"
+    "url": "https://unonessunocentomilaombre.lovable.app"
   },
   {
     "id": "torbaviva-resoconto",
