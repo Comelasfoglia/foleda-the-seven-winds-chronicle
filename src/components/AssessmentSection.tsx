@@ -11,6 +11,7 @@ type AppScreen = "soglia" | "porte" | "esplora" | "gioca" | "scopri";
 
 interface AssessmentSectionProps {
   onNavigate: (target: AppScreen, regionId?: string) => void;
+  onWindChange?: (intensity: number) => void;
 }
 
 type Phase = "intro" | "questions" | "reveal" | "result";
@@ -46,7 +47,7 @@ function buildShuffledQuestions(): ShuffledQuestion[] {
   });
 }
 
-const AssessmentSection = ({ onNavigate }: AssessmentSectionProps) => {
+const AssessmentSection = ({ onNavigate, onWindChange }: AssessmentSectionProps) => {
   const [phase, setPhase] = useState<Phase>("intro");
   const [currentQ, setCurrentQ] = useState(0);
   const [answers, setAnswers] = useState<number[]>([]);
