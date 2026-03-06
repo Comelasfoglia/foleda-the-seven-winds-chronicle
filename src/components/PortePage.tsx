@@ -1,5 +1,6 @@
 import { Home } from "lucide-react";
 import ComelasfogliaFooter from "@/components/ComelasfogliaFooter";
+import WhatIsFoleda from "@/components/WhatIsFoleda";
 type AppScreen = "soglia" | "porte" | "esplora" | "gioca" | "scopri";
 
 interface PortePageProps {
@@ -38,6 +39,9 @@ const PortePage = ({ onNavigate }: PortePageProps) => {
       >
         <Home size={22} />
       </button>
+      <div className="absolute top-6 right-6">
+        <WhatIsFoleda />
+      </div>
 
       <h2 className="font-display text-3xl md:text-4xl font-semibold text-foreground mb-4 text-center">
         Le Tre Porte

@@ -1,5 +1,6 @@
 import { useState } from "react";
 import ComelasfogliaFooter from "@/components/ComelasfogliaFooter";
+import WhatIsFoleda from "@/components/WhatIsFoleda";
 import logoFoleda from "@/assets/logo-foleda.png";
 
 interface SogliaPageProps {
@@ -11,6 +12,9 @@ const SogliaPage = ({ onEnter }: SogliaPageProps) => {
 
   return (
     <div className="flex flex-col items-center justify-center min-h-screen px-4 relative">
+      <div className="absolute top-6 right-6">
+        <WhatIsFoleda />
+      </div>
       <button
         onClick={onEnter}
         onMouseEnter={() => setHovering(true)}
