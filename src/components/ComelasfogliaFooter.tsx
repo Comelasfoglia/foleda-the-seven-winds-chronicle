@@ -1,4 +1,4 @@
-import logoComelasfoglia from "@/assets/logo-comelasfoglia.png";
+import logoComelasfoglia from "@/assets/logo-comelasfoglia.webp";
 
 const ComelasfogliaFooter = () => (
   <footer className="mt-16 mb-8 flex flex-col items-center gap-2">
