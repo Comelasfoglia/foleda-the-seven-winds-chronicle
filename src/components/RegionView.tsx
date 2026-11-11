@@ -1,4 +1,5 @@
 import { useState, useCallback, useRef, useEffect } from "react";
+import { pubblico } from "@/lib/indirizzi";
 import { ChevronLeft } from "lucide-react";
 import SubLocationBalloon from "@/components/SubLocationBalloon";
 import adventuresData from "@/data/adventures.json";
@@ -77,15 +78,15 @@ const hotspots: Record<string, { number: number; x: number; y: number }[]> = {
 };
 
 const regionImageMap: Record<string, string> = {
-  nord: "/assets/regions/1_nord.png",
-  nordest: "/assets/regions/2_nordest.png",
-  est: "/assets/regions/3_est.png",
-  sudest: "/assets/regions/4_sudest.png",
-  sud: "/assets/regions/5_sud.png",
-  sudovest: "/assets/regions/6_sudovest.png",
-  ovest: "/assets/regions/7_ovest.png",
-  nordovest: "/assets/regions/8_nordovest.png",
-  centro: "/assets/regions/centro.png",
+  nord: pubblico("assets/regions/1_nord.png"),
+  nordest: pubblico("assets/regions/2_nordest.png"),
+  est: pubblico("assets/regions/3_est.png"),
+  sudest: pubblico("assets/regions/4_sudest.png"),
+  sud: pubblico("assets/regions/5_sud.png"),
+  sudovest: pubblico("assets/regions/6_sudovest.png"),
+  ovest: pubblico("assets/regions/7_ovest.png"),
+  nordovest: pubblico("assets/regions/8_nordovest.png"),
+  centro: pubblico("assets/regions/centro.png"),
 };
 
 interface RegionViewProps {

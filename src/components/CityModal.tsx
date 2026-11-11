@@ -1,4 +1,5 @@
 import { useState, useCallback, useRef, useEffect } from "react";
+import { pubblico } from "@/lib/indirizzi";
 import { X, ChevronLeft, ChevronRight } from "lucide-react";
 import FormattedText from "./FormattedText";
 import { useIsMobile } from "@/hooks/use-mobile";
@@ -289,7 +290,7 @@ const CityModal = ({ region, onBack }: CityModalProps) => {
             {/* Region image */}
             <div className="w-full mb-6 rounded-lg overflow-hidden">
               <img
-                src="/assets/regions/centro.png"
+                src={pubblico("assets/regions/centro.png")}
                 alt="La Città"
                 className="w-full h-auto"
                 loading="lazy"

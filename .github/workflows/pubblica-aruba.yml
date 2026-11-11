@@ -1,0 +1,73 @@
+name: Pubblica su comelasfoglia.com
+
+# Ogni modifica sul ramo main viene costruita e caricata su Aruba via SSH,
+# con la chiave dedicata (secret ARUBA_SSH_KEY, utente SSH rdjpck6-github).
+# Si può anche lanciare a mano da GitHub: Actions > Pubblica su comelasfoglia.com > Run workflow.
+on:
+  push:
+    branches: [main]
+  workflow_dispatch:
+
+concurrency:
+  group: pubblica-aruba
+  cancel-in-progress: false
+
+env:
+  # Indirizzo dell'app sul sito: www.comelasfoglia.com/foleda/
+  DEPLOY_BASE: /foleda/
+  # Cartella sul server, a partire dalla radice del sito
+  CARTELLA: foleda/
+  SSH_HOST: ssh.rlabbj8.webhostingaruba.it
+  SSH_PORTA: "2222"
+  SSH_UTENTE: rdjpck6-github
+
+jobs:
+  pubblica:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 20
+          cache: npm
+
+      - name: Installa le dipendenze
+        # npm install e non npm ci: Lovable aggiorna bun.lock e non sempre package-lock.json
+        run: npm install --no-audit --no-fund
+
+      - name: Costruisci il sito
+        run: npm run build
+
+      - name: Regole per il server Apache di Aruba
+        run: |
+          cat > dist/.htaccess <<'FINE'
+          <IfModule mod_rewrite.c>
+            RewriteEngine On
+            RewriteBase __BASE__
+            RewriteRule ^index\.html$ - [L]
+            RewriteCond %{REQUEST_FILENAME} !-f
+            RewriteCond %{REQUEST_FILENAME} !-d
+            RewriteRule . __BASE__index.html [L]
+          </IfModule>
+
+          <IfModule mod_headers.c>
+            <FilesMatch "^index\.html$">
+              Header set Cache-Control "no-cache"
+            </FilesMatch>
+          </IfModule>
+          FINE
+          sed -i "s#__BASE__#${DEPLOY_BASE}#g" dist/.htaccess
+
+      - name: Carica su Aruba
+        env:
+          CHIAVE: ${{ secrets.ARUBA_SSH_KEY }}
+        run: |
+          mkdir -p ~/.ssh && chmod 700 ~/.ssh
+          printf '%s\n' "$CHIAVE" > ~/.ssh/aruba && chmod 600 ~/.ssh/aruba
+          # Chiave del server Aruba, verificata alla prima connessione
+          echo "[ssh.rlabbj8.webhostingaruba.it]:2222 ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAIFAJ9eYxQ+61Nip91pdfKUFz7XVW9IQEpvk91HmxxOXJ" > ~/.ssh/known_hosts
+          SSH="ssh -i $HOME/.ssh/aruba -p $SSH_PORTA -o BatchMode=yes -o StrictHostKeyChecking=yes"
+          $SSH "$SSH_UTENTE@$SSH_HOST" "mkdir -p $CARTELLA"
+          rsync -rlz --delete --chmod=D755,F644 --itemize-changes \
+            -e "$SSH" dist/ "$SSH_UTENTE@$SSH_HOST:$CARTELLA"
