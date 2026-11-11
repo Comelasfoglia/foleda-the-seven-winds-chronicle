@@ -1,4 +1,5 @@
 import { useState, useCallback, useMemo, useEffect, useRef } from "react";
+import { indirizzoApp } from "@/lib/indirizzi";
 import assessmentData from "@/data/assessment.json";
 import charactersData from "@/data/characters.json";
 import adventuresData from "@/data/adventures.json";
@@ -159,7 +160,7 @@ const AssessmentSection = ({ onNavigate, onWindChange }: AssessmentSectionProps)
 
   const handleShare = useCallback(() => {
     if (!result?.first) return;
-    const text = `Nella Piana dei Sette Venti, io sono ${result.first!.name}. "${result.first!.resultQuote}" Scopri chi sei tu → ${window.location.origin}`;
+    const text = `Nella Piana dei Sette Venti, io sono ${result.first!.name}. "${result.first!.resultQuote}" Scopri chi sei tu → ${indirizzoApp()}`;
     navigator.clipboard.writeText(text);
   }, [result]);
 
