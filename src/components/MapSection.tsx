@@ -4,7 +4,7 @@ import RegionView from "@/components/RegionView";
 import CityModal from "@/components/CityModal";
 import DiceRoller from "@/components/DiceRoller";
 import ComelasfogliaFooter from "@/components/ComelasfogliaFooter";
-import mappaFoleda from "@/assets/mappa-foleda.png";
+import mappaFoleda from "@/assets/mappa-foleda.webp";
 
 interface MapSectionProps {
   targetRegionId: string | null;

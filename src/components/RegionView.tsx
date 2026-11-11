@@ -78,15 +78,15 @@ const hotspots: Record<string, { number: number; x: number; y: number }[]> = {
 };
 
 const regionImageMap: Record<string, string> = {
-  nord: pubblico("assets/regions/1_nord.png"),
-  nordest: pubblico("assets/regions/2_nordest.png"),
-  est: pubblico("assets/regions/3_est.png"),
-  sudest: pubblico("assets/regions/4_sudest.png"),
-  sud: pubblico("assets/regions/5_sud.png"),
-  sudovest: pubblico("assets/regions/6_sudovest.png"),
-  ovest: pubblico("assets/regions/7_ovest.png"),
-  nordovest: pubblico("assets/regions/8_nordovest.png"),
-  centro: pubblico("assets/regions/centro.png"),
+  nord: pubblico("assets/regions/1_nord.webp"),
+  nordest: pubblico("assets/regions/2_nordest.webp"),
+  est: pubblico("assets/regions/3_est.webp"),
+  sudest: pubblico("assets/regions/4_sudest.webp"),
+  sud: pubblico("assets/regions/5_sud.webp"),
+  sudovest: pubblico("assets/regions/6_sudovest.webp"),
+  ovest: pubblico("assets/regions/7_ovest.webp"),
+  nordovest: pubblico("assets/regions/8_nordovest.webp"),
+  centro: pubblico("assets/regions/centro.webp"),
 };
 
 interface RegionViewProps {

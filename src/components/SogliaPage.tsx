@@ -1,7 +1,7 @@
 import { useState } from "react";
 import ComelasfogliaFooter from "@/components/ComelasfogliaFooter";
 import WhatIsFoleda from "@/components/WhatIsFoleda";
-import logoFoleda from "@/assets/logo-foleda.png";
+import logoFoleda from "@/assets/logo-foleda.webp";
 
 interface SogliaPageProps {
   onEnter: () => void;

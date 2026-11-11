@@ -69,5 +69,6 @@ jobs:
           echo "[ssh.rlabbj8.webhostingaruba.it]:2222 ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAIFAJ9eYxQ+61Nip91pdfKUFz7XVW9IQEpvk91HmxxOXJ" > ~/.ssh/known_hosts
           SSH="ssh -i $HOME/.ssh/aruba -p $SSH_PORTA -o BatchMode=yes -o StrictHostKeyChecking=yes"
           $SSH "$SSH_UTENTE@$SSH_HOST" "mkdir -p $CARTELLA"
-          rsync -rlz --delete --chmod=D755,F644 --itemize-changes \
+          # Le sottocartelle delle altre app di Anno 6080 non vengono toccate.
+          rsync -rlz --delete --chmod=D755,F644 --exclude=/ombre/ --exclude=/torbaviva/ --itemize-changes \
             -e "$SSH" dist/ "$SSH_UTENTE@$SSH_HOST:$CARTELLA"

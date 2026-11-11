@@ -290,7 +290,7 @@ const CityModal = ({ region, onBack }: CityModalProps) => {
             {/* Region image */}
             <div className="w-full mb-6 rounded-lg overflow-hidden">
               <img
-                src={pubblico("assets/regions/centro.png")}
+                src={pubblico("assets/regions/centro.webp")}
                 alt="La Città"
                 className="w-full h-auto"
                 loading="lazy"
